@@ -1,4 +1,4 @@
-import GridImageGallery from "@/components/GridImageGallery";
+//import GridImageGallery from "@/components/GridImageGallery";
 
 const MainContent = () => {
   return (

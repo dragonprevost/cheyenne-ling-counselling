@@ -1,4 +1,4 @@
-import GridImageGallery from "@/components/GridImageGallery";
+//import GridImageGallery from "@/components/GridImageGallery";
 
 const MainContent = () => {
   return (
@@ -12,9 +12,9 @@ const MainContent = () => {
           We are a full-service landscaping company operating in Whistler and
           Pemberton, BC. Our mission is to bring beautiful, functional outdoor
           spaces to life through professional landscape maintenance, custom
-          installations, and hardscaping services. Whether you're looking to
+          installations, and hardscaping services. Whether you&#39;re looking to
           enhance your garden, build a patio, or create a new outdoor living
-          area, we've got you covered!
+          area, we&#39;ve got you covered!
         </p>
       </section>
 

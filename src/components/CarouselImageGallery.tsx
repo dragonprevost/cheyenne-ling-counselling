@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface CarouselImageGallery {
   images: { src: string; caption: string }[];
 }
@@ -11,9 +13,9 @@ const CarouselImageGallery: React.FC<CarouselImageGallery> = ({images}) => {
       <div className="flex space-x-4 overflow-x-scroll scrollbar-hide">
         {images.map(({src, caption}, idx) => (
           <div key={idx} className="flex-shrink-0 w-80 relative group">
-            <img
+            <Image
               src={src}
-              alt={`Landscaping Project ${idx + 1}`}
+              alt={caption}
               className="w-full h-auto rounded-lg shadow-md transform transition-transform duration-200 ease-in-out group-hover:scale-105"
             />
             {/* Optional Caption */}

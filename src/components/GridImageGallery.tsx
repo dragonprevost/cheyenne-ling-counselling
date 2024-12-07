@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface ImageGridProps {
   images: { src: string; caption: string }[];
 }
@@ -7,7 +9,7 @@ const GridImageGallery: React.FC<ImageGridProps> = ({ images }) => {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {images.map(({ src, caption }, idx) => (
         <div key={idx} className="relative group">
-          <img
+          <Image
             src={src}
             alt={`${caption}`}
             className="w-full h-auto rounded-lg shadow-md transform transition-transform duration-200 ease-in-out group-hover:scale-105"
