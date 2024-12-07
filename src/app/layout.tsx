@@ -51,7 +51,6 @@ const Header = () => {
 const Footer = () => {
   return (
       <footer className="bg-gray-800 text-white py-4 text-center mt-auto">
-        <p>9101 Riverside Drive, Whistler BC</p>
         <p>&copy; 2024 Pemberton Landscaping. All rights reserved.</p>
       </footer>
   );
