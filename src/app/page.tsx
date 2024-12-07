@@ -1,101 +1,101 @@
-import Image from "next/image";
+import GridImageGallery from "@/components/GridImageGallery";
+
+const MainContent = () => {
+  return (
+    <div className="container mx-auto p-6">
+      {/* About Section */}
+      <section id="about" className="py-10">
+        <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-4">
+          About Us
+        </h2>
+        <p className="text-gray-600 leading-relaxed dark:text-gray-200">
+          We are a full-service landscaping company operating in Whistler and
+          Pemberton, BC. Our mission is to bring beautiful, functional outdoor
+          spaces to life through professional landscape maintenance, custom
+          installations, and hardscaping services. Whether you're looking to
+          enhance your garden, build a patio, or create a new outdoor living
+          area, we've got you covered!
+        </p>
+      </section>
+
+      {/* Images Section 
+      <section id="images" className="py-10">
+        <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-4">
+          Our Work
+        </h2>
+        <GridImageGallery
+          images={[
+            {
+              src: "https://cdn.prod.website-files.com/65c10bb4b9d29f7d663d57f4/65ce0d7a0370299504f03c45_Placeholder%20Image-7-min.jpg",
+              caption: "Test",
+            },
+            {
+              src: "https://cdn.prod.website-files.com/65c10bb4b9d29f7d663d57f4/65cbdb7a769e20bf862bd00d_Placeholder%20Image-min.jpg",
+              caption: "Test",
+            },
+            {
+              src: "https://cdn.prod.website-files.com/65c10bb4b9d29f7d663d57f4/65cbdbc543d10d0f1dccf7c5_Placeholder%20Image-3-min.jpg",
+              caption: "Test",
+            },
+          ]}
+        />
+      </section>
+      */}
+      {/* Services Section */}
+      <section id="services" className="py-10">
+        <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-4">
+          Our Services
+        </h2>
+        <ul className="space-y-6 text-gray-600 dark:text-gray-300">
+          <li>
+            <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+              Maintenance
+            </h3>
+            <p>
+              Keep your outdoor spaces looking their best year-round with our
+              professional landscaping maintenance services. We handle
+              everything from lawn care to garden upkeep.
+            </p>
+          </li>
+          <li>
+            <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+              Patios
+            </h3>
+            <p>
+              Create a beautiful and functional outdoor living area with our
+              custom patio design and installation services.
+            </p>
+          </li>
+          <li>
+            <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+              Installs
+            </h3>
+            <p>
+              Our team provides expert installations of plants, turf, irrigation
+              systems, and more to bring your outdoor vision to life.
+            </p>
+          </li>
+          <li>
+            <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+              Hardscaping & Construction
+            </h3>
+            <p>
+              From retaining walls to walkways, our hardscaping services enhance
+              the structure and functionality of your outdoor space.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </div>
+  );
+};
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+    <div>
+      <main className="flex-grow">
+        <MainContent />
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
