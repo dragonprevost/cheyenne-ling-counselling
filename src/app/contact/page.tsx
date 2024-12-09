@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: 'Get in touch with Pemberton Landscaping.',
+};
+
 const Contact = () => {
   return (
     <div className="flex items-center justify-center">

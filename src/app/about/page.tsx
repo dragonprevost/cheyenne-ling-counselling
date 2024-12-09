@@ -1,4 +1,10 @@
 //import GridImageGallery from "@/components/GridImageGallery";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+  description: 'Get to know Pemberton Landscaping.',
+};
 
 const MainContent = () => {
   return (
