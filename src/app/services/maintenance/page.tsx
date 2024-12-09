@@ -18,7 +18,7 @@ const MainContent = () => {
         <p className="text-gray-600 leading-relaxed dark:text-gray-200">
           Our landscaping maintenance services are designed to keep your outdoor
           spaces vibrant, healthy, and beautiful throughout the year. Whether
-          it's spring cleanups, summer lawn care, or fall leaf removal, our
+          it&#39;s spring cleanups, summer lawn care, or fall leaf removal, our
           skilled team provides meticulous attention to detail for every task.
           Services include:
         </p>
