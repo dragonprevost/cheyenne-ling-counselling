@@ -11,6 +11,8 @@ const GridImageGallery: React.FC<ImageGridProps> = ({ images }) => {
         <div key={idx} className="relative group">
           <Image
             src={src}
+            width={300}
+            height={300}
             alt={`${caption}`}
             className="w-full h-auto rounded-lg shadow-md transform transition-transform duration-200 ease-in-out group-hover:scale-105"
           />

@@ -1,4 +1,8 @@
 import type { Metadata } from "next";
+import GridImageGallery from "@/components/GridImageGallery";
+
+import rainbowPatio from "/public/images/rainbow_patio_square.jpeg";
+import saunaPatio from "/public/images/sauna_patio_square.jpeg";
 
 export const metadata: Metadata = {
   title: "Patios and Driveway Installation",
@@ -21,26 +25,47 @@ const MainContent = () => {
         </p>
         <ul className="list-disc pl-6 space-y-3 text-gray-600 dark:text-gray-200 p-4">
           <li>
-            <span className="font-semibold">Patios:</span> From natural stone to
-            pavers, we create functional and inviting spaces perfect for
-            entertaining or relaxing outdoors.
+            <span className="font-semibold">Patios:</span> Transform your
+            outdoor living area with custom patios made from high-quality
+            materials like natural stone, concrete pavers, and flagstone.
+            Whether you’re creating a space for relaxing, dining, or
+            entertaining, we design patios that seamlessly integrate with your
+            home and yard.
           </li>
           <li>
-            <span className="font-semibold">Garden bed maintenance:</span>{" "}
-            Durable and aesthetically pleasing, our driveways are designed to
-            withstand BC’s climate while boosting curb appeal.
+            <span className="font-semibold">Driveways:</span> Boost your curb
+            appeal with driveways that are both practical and visually striking.
+            Using durable materials such as interlocking pavers, exposed
+            aggregate concrete, and gravel, we ensure your driveway stands up to
+            BC’s climate while enhancing your property’s value.
           </li>
           <li>
             <span className="font-semibold">Materials:</span> We specialize in
-            high-quality materials such as flagstone, concrete, interlocking
-            pavers, and gravel for a unique, long-lasting finish.
+            premium materials, including flagstone, stamped concrete,
+            interlocking pavers, and natural gravel, for a finish that’s built
+            to last and suits your style.
           </li>
           <li>
-            <span className="font-semibold">Seasonal cleanups:</span> Removal of
-            debris, leaves, and dead plants to prepare your yard for the
-            changing seasons.
+            <span className="font-semibold">Custom Design:</span> Every project
+            is unique. We work closely with you to bring your vision to life,
+            considering your preferences, lifestyle, and the specific conditions
+            of your property.
           </li>
         </ul>
+        <section id="images" className="py-10">
+          <GridImageGallery
+            images={[
+              {
+                src: rainbowPatio.src,
+                caption: "Covered Patios",
+              },
+              {
+                src: saunaPatio.src,
+                caption: "Outdoor Patios",
+              },
+            ]}
+          />
+        </section>
         <p className="text-gray-600 leading-relaxed dark:text-gray-200">
           Let us transform your outdoor spaces into practical, beautiful areas
           you’ll love for years to come.

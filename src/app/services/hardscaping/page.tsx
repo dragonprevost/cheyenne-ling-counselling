@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
+import GridImageGallery from "@/components/GridImageGallery";
+import rainbowPatio from "/public/images/rainbow_patio_square.jpeg";
+import saunaPatio from "/public/images/sauna_patio_square.jpeg";
+import stoneSteps from "/public/images/stone_steps_square.jpeg";
 
 export const metadata: Metadata = {
   title: "Hardscaping & Construction",
   //description: '',
 };
+
 
 const MainContent = () => {
   return (
@@ -43,6 +48,24 @@ const MainContent = () => {
             Unique creations that harmonize with BC’s natural beauty.{" "}
           </li>
         </ul>
+        <section id="images" className="py-10">
+          <GridImageGallery
+            images={[
+              {
+                src: rainbowPatio.src,
+                caption: "Covered Patios",
+              },
+              {
+                src: stoneSteps.src,
+                caption: "Garden Staircase",
+              },
+              {
+                src: saunaPatio.src,
+                caption: "Outdoor Patios",
+              },
+            ]}
+          />
+        </section>
         <p className="text-gray-600 leading-relaxed dark:text-gray-200">
           With a focus on quality and durability, our hardscaping projects are
           built to last, even in the rugged environments of Whistler and

@@ -1,6 +1,10 @@
-//import GridImageGallery from "@/components/GridImageGallery";
+import GridImageGallery from "@/components/GridImageGallery";
 
 import type { Metadata } from "next";
+
+import cypressMaintenanceOne from "/public/images/cypress_maintenance_square.jpeg";
+import cypressMaintenanceTwo from "/public/images/cypress_maintenance_two_square.jpeg";
+import kyahMaintenance from "/public/images/kyah_turf_square.jpeg";
 
 export const metadata: Metadata = {
   title: "Maintenance",
@@ -43,6 +47,24 @@ const MainContent = () => {
           </li>
         </ul>
 
+        <section id="images" className="py-10">
+          <GridImageGallery
+            images={[
+              {
+                src: cypressMaintenanceOne.src,
+                caption: "Cypress Place",
+              },
+              {
+                src: kyahMaintenance.src,
+                caption: "Tapleys",
+              },
+              {
+                src: cypressMaintenanceTwo.src,
+                caption: "Cypress Place",
+              },
+            ]}
+          />
+        </section>
         <p className="text-gray-600 leading-relaxed dark:text-gray-200">
           Our maintenance team proudly serves the communities of Whistler,
           Pemberton, and surrounding areas, ensuring your property reflects the

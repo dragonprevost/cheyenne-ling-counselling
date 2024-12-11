@@ -1,7 +1,11 @@
-//import GridImageGallery from "@/components/GridImageGallery";
+import GridImageGallery from "@/components/GridImageGallery";
 
 import StyledLink from "@/components/StyledLink";
 import Link from "next/link";
+
+import cypressMaintenanceOne from "../../public/images/cypress_maintenance_square.jpeg";
+import cypressMaintenanceTwo from "../../public/images/cypress_maintenance_two_square.jpeg";
+import stoneSteps from "../../public/images/stone_steps_square.jpeg";
 
 const MainContent = () => {
   return (
@@ -23,7 +27,6 @@ const MainContent = () => {
         </p>
       </section>
 
-      {/* Images Section 
       <section id="images" className="py-10">
         <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-4">
           Our Work
@@ -31,21 +34,20 @@ const MainContent = () => {
         <GridImageGallery
           images={[
             {
-              src: "https://cdn.prod.website-files.com/65c10bb4b9d29f7d663d57f4/65ce0d7a0370299504f03c45_Placeholder%20Image-7-min.jpg",
-              caption: "Test",
+              src: cypressMaintenanceOne.src,
+              caption: "Cypress Place Maintenance",
             },
             {
-              src: "https://cdn.prod.website-files.com/65c10bb4b9d29f7d663d57f4/65cbdb7a769e20bf862bd00d_Placeholder%20Image-min.jpg",
-              caption: "Test",
+              src: stoneSteps.src,
+              caption: "Outdoor Staircase Hardscaping",
             },
             {
-              src: "https://cdn.prod.website-files.com/65c10bb4b9d29f7d663d57f4/65cbdbc543d10d0f1dccf7c5_Placeholder%20Image-3-min.jpg",
-              caption: "Test",
+              src: cypressMaintenanceTwo.src,
+              caption: "Cypress Place Maintenance",
             },
           ]}
         />
       </section>
-      */}
       {/* Services Section */}
       <section id="services" className="py-10">
         <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-4">
