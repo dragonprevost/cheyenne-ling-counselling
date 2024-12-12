@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import GridImageGallery from "@/components/GridImageGallery";
+
 import rainbowPatio from "/public/images/rainbow_patio_square.jpeg";
 import saunaPatio from "/public/images/sauna_patio_square.jpeg";
 import stoneSteps from "/public/images/stone_steps_square.jpeg";

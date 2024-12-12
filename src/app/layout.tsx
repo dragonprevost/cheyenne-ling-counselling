@@ -40,25 +40,25 @@ const Header = () => {
         <nav className="space-x-6 mt-4 md:mt-0 relative">
           <a
             href="/"
-            className="dark:text-gray-400 text-gray-700 hover:text-gray-900"
+            className="dark:text-gray-400 text-gray-700 hover:text-gray-900 dark:hover:text-gray-500"
           >
             Home
           </a>
           <a
             href="/about"
-            className="dark:text-gray-400 text-gray-700 hover:text-gray-900"
+            className="dark:text-gray-400 text-gray-700 hover:text-gray-900 dark:hover:text-gray-500"
           >
             About
           </a>
           <a
             href="/contact"
-            className="dark:text-gray-400 text-gray-700 hover:text-gray-900"
+            className="dark:text-gray-400 text-gray-700 hover:text-gray-900 dark:hover:text-gray-500"
           >
             Contact
           </a>
           {/* Services Dropdown */}
           <div className="relative group inline-block">
-            <button className="dark:text-gray-400 text-gray-700 hover:text-gray-900 focus:outline-none">
+            <button className="dark:text-gray-400 text-gray-700 dark:hover:text-gray-500 hover:text-gray-900 focus:outline-none">
               Services
               <svg
                 className="inline-block ml-1 w-4 h-4"
@@ -75,7 +75,7 @@ const Header = () => {
                 />
               </svg>
             </button>
-            <div className="absolute left-0 hidden group-hover:block bg-white dark:bg-black shadow-lg rounded-lg py-2 mt-0 z-10">
+            <div className="absolute right-0 hidden group-hover:block bg-white dark:bg-black shadow-lg rounded-lg py-2 mt-0 z-10">
               <a
                 href="/services/maintenance"
                 className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"

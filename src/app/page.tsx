@@ -12,9 +12,6 @@ const MainContent = () => {
     <div className="container mx-auto p-6">
       {/* About Section */}
       <section id="about" className="py-10">
-        <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-4">
-          About Us
-        </h2>
         <p className="text-gray-600 leading-relaxed dark:text-gray-200">
           We are a full-service landscaping company operating in{" "}
           <StyledLink href="/services/whistler">Whistler</StyledLink> and{" "}
