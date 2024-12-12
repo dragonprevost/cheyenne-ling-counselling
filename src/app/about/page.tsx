@@ -24,14 +24,14 @@ const MainContent = () => {
           experience, brings a fresh perspective to the operations of th team.
           <br />
           <br />
-          Dre and Dragon have been working together since 2014, combining their
-          experience and skills to deliver quality landscaping services in
-          Whistler and Pemberton. Alongside them is Kotaro, a valued team member
-          who has been contributing his hard work and expertise for the past
-          three years. Whether it’s refreshing a garden, building custom patios,
-          or completing complex hardscaping projects, the team at Pemberton
-          Landscaping focuses on craftsmanship and ensuring every client’s
-          vision becomes reality.{" "}
+          Dre and Dragon first worked together in 2014 and have collaborated on
+          and off since then, combining their skills and experience to deliver
+          exceptional landscaping services in Whistler and Pemberton. They are
+          joined by Kotaro, a dedicated team member who has been contributing
+          his expertise and hard work for the past three years. Whether it’s
+          revitalizing a garden, creating custom patios, or tackling complex
+          hardscaping projects, the team at Pemberton Landscaping focuses on
+          quality craftsmanship and turning each client’s vision into reality.
         </p>
       </section>
     </div>
