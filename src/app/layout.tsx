@@ -12,9 +12,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Pemberton Landscaping",
+  title: "Cheyenne Ling Counselling",
   description:
-    "Landscaping construction, installations, and maintenance in the sea to sky corridor.",
+    "Counselling with Cheyenne Ling"
 };
 
 const Header = () => {
@@ -33,17 +33,11 @@ const Header = () => {
             />
           </a>
           <span className="ml-3 text-xl font-semibold text-gray-900 dark:text-gray-100">
-            Cheyenne<br/>Ling<br/>Counselling
+            Cheyenne Ling<br/>Counselling
           </span>
         </div>
         {/* Navigation */}
         <nav className="space-x-6 mt-4 md:mt-0 relative">
-          <a
-            href="/"
-            className="dark:text-gray-400 text-gray-700 hover:text-gray-900 dark:hover:text-gray-500"
-          >
-            Home
-          </a>
           <a
             href="/about"
             className="dark:text-gray-400 text-gray-700 hover:text-gray-900 dark:hover:text-gray-500"
@@ -56,46 +50,30 @@ const Header = () => {
           >
             Contact
           </a>
-          {/* Services Dropdown */}
-          <div className="relative group inline-block">
-            <button className="dark:text-gray-400 text-gray-700 dark:hover:text-gray-500 hover:text-gray-900 focus:outline-none">
-              Services
-              <svg
-                className="inline-block ml-1 w-4 h-4"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            <div className="absolute right-0 hidden group-hover:block bg-white dark:bg-black shadow-lg rounded-lg py-2 mt-0 z-10">
-              <a
-                href="/services/maintenance"
-                className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                Maintenance
-              </a>
-              <a
-                href="/services/patios"
-                className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                Patios
-              </a>
-              <a
-                href="/services/hardscaping"
-                className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                Hardscaping
-              </a>
-            </div>
-          </div>
+          <a
+            href="/faqs"
+            className="dark:text-gray-400 text-gray-700 hover:text-gray-900 dark:hover:text-gray-500"
+          >
+            FAQs
+          </a>
+          <a
+            href="/areas-of-focus"
+            className="dark:text-gray-400 text-gray-700 hover:text-gray-900 dark:hover:text-gray-500"
+          >
+            Areas of focus
+          </a>
+          <a
+            href="/offerings"
+            className="dark:text-gray-400 text-gray-700 hover:text-gray-900 dark:hover:text-gray-500"
+          >
+            Offerings
+          </a>
+          <a
+            href="/book"
+            className="dark:text-gray-400 text-gray-700 hover:text-gray-900 dark:hover:text-gray-500"
+          >
+            Book now
+          </a>
         </nav>
       </div>
     </header>
