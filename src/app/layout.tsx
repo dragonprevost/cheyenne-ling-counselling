@@ -33,7 +33,7 @@ const Header = () => {
             />
           </a>
           <span className="ml-3 text-xl font-semibold text-gray-900 dark:text-gray-100">
-            PEMBERTON<br/>LANDSCAPING
+            Cheyenne<br/>Ling<br/>Counselling
           </span>
         </div>
         {/* Navigation */}
