@@ -13,7 +13,7 @@ const MainContent = () => {
       {/* About Section */}
       <section id="about" className="py-10">
         <p className="text-gray-600 leading-relaxed dark:text-gray-200">
-          We are a full-service landscaping company operating in{" "}
+          Cheyenne Ling operating in{" "}
           <StyledLink href="/services/whistler">Whistler</StyledLink> and{" "}
           <StyledLink href="/services/pemberton">Pemberton</StyledLink>, BC. Our
           mission is to bring beautiful, functional outdoor spaces to life
