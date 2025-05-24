@@ -2,22 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+* 2B4F5D : Charcoal
+* 537D8D : Air force blue
+* 4C706D : Hooker's green
+* D2CFC4 : Timber wolf
+*
+* */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #d2cfc4;
+  --foreground: #2b4f5d;
+  --primary: #2b4f5d;
+  --secondary: #2b4f5d;
+  --secondary-dark: #2b4f5d;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #F4F1EE;
+    --background-dark: #A9C5D3;
+    --foreground: #d2cfc4;
+    --primary: #333333;
+    --primary-dark: #333333;
+    --secondary: #d2cfc4;
+    --secondary-dark: #bab7ad;
+    --attention: #4c706d;
+    --surface: #e8e3df;
   }
 }
 
 body {
-  color: var(--foreground);
+  color: var(--primary);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Souviner,
+}
+
+@font-face {
+  font-family: "Cooper Black Regular";
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local("Cooper Black Regular"),
+    url("/fonts/COOPBL.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Souvenir";
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local("Souvenir"),
+    url("/fonts/Souvenir.woff") format("woff");
 }
 
 @layer utilities {
