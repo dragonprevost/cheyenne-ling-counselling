@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { Menu, X } from "lucide-react"; // You can use another icon if you prefer
-import logoImg from "../../public/logo-tree.png";
+// import logoImg from "../../public/logo-tree.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
