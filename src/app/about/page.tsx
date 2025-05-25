@@ -57,12 +57,12 @@ const About = () => {
         <div className="flex flex-col md:flex-row gap-6 md:gap-12">
           <div className="md:w-1/2">
             <Sheet>
-              <TrainingsContent />
+              <EducationAndCertificationsContent />
             </Sheet>
           </div>
           <div className="md:w-1/2">
             <Sheet>
-              <EducationAndCertificationsContent />
+              <TrainingsContent />
             </Sheet>
           </div>
         </div>
@@ -132,6 +132,7 @@ const EducationAndCertificationsContent = () => {
           body="BC Government, December 2024"
         />
       </List>
+      <br/>
       <h2 className="text-2xl font-semibold mb-4">Education</h2>
       <List>
         <EducationItem
