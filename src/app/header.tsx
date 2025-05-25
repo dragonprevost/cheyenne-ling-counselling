@@ -14,15 +14,6 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo Section */}
         <div className="flex items-center">
-          <a href="/">
-            <Image
-              className="dark:invert"
-              src={logoImg}
-              alt="Company Logo"
-              width={40}
-              height={40}
-            />
-          </a>
           <span className="ml-3 text-xl font-semibold text-primary">
             Cheyenne Ling
             <br />
@@ -58,7 +49,9 @@ const Header = () => {
 const NavLinks = ({ vertical = false }: { vertical?: boolean }) => {
   const baseClass = "text-primary hover:text-primaryDark";
   const layout = vertical ? "block" : "";
-
+  if (true) {
+    return <></>;
+  }
   return (
     <>
       <a href="/about" className={`${baseClass} ${layout}`}>

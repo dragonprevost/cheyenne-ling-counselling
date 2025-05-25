@@ -1,7 +1,7 @@
 const MainContent = () => {
   return (
     <div className="container mx-auto">
-      Cheyenne Ling
+      Coming soon...
     </div>
   );
 };
