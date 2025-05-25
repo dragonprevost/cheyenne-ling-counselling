@@ -33,11 +33,11 @@ const AboutFirstParagraphContent = () => {
   return (
     <div className="text-lg">
       <p className="indent-4">
-        Welcome to my page! I’m Cheyenne, a Registered Clinical Counsellor (RCC)
+        Welcome to my page! I&apos;m Cheyenne, a Registered Clinical Counsellor (RCC)
         based in Vancouver, BC. I understand how isolating and exhausting it can
         feel to be stuck in a cycle of depression, anxiety, grief, addiction, or
         low self-esteem. Through my own personal struggles with disordered
-        eating, depression, and anxiety, I've learned how important it is to
+        eating, depression, and anxiety, I&apos;ve learned how important it is to
         have a welcoming space where you can express yourself freely, without
         judgment.
       </p>
@@ -46,7 +46,7 @@ const AboutFirstParagraphContent = () => {
         degree in Psychology (with distinction), which led me to work in a
         neuropsychology program as a psychometrist. In this role, I administered
         psychometric tests for neurological and mental health conditions,
-        including Parkinson’s disease, substance use, and depression.
+        including Parkinson&apos;s disease, substance use, and depression.
         <br />
       </p>
       <p className="text-base indent-4 pt-3">
@@ -54,7 +54,7 @@ const AboutFirstParagraphContent = () => {
         Clinical Counsellor by obtaining a Master of Arts in Counselling
         Psychology. This path has allowed me to work in a field that aligns with
         my passion for creating safe, non-judgmental spaces where people can
-        explore their emotions and navigate life’s challenges. I am deeply
+        explore their emotions and navigate life&apos;s challenges. I am deeply
         honoured to collaborate with individuals as they explore their inner
         worlds and journeys toward healing.
         <br />
