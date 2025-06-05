@@ -1,18 +1,25 @@
 import Sheet from "@/components/Sheet";
 import type { Metadata } from "next";
 import Image from "next/image";
-import headShot from "/public/images/head-shot.png";
+import headShot from "/public/images/head-shot.jpg";
+
 
 export const metadata: Metadata = {
   title: "About",
   description: "About Cheyenne Ling Counselling.",
 };
 
+const HEADER_HEIGHT = 88; // px — adjust if your header height differs
+
 const About = () => {
   return (
     <>
-      <div className="bg-[url(/images/forget-me-nots.jpg)] bg-cover p-6">
-        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
+      {/* Top Section with bg image filling viewport minus header */}
+      <div
+        className="bg-[url(/images/winter-tree-top.jpg)] bg-cover bg-center p-6 flex items-center"
+        style={{ minHeight: `calc(100vh - ${HEADER_HEIGHT}px)` }}
+      >
+        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 w-full">
           <div className="md:w-1/2 text-onBackground">
             <h2 className="font-cooper text-7xl mb-4">About</h2>
             <p className="text-base text-gray-600 mb-4">
@@ -20,15 +27,13 @@ const About = () => {
               (RCC) based in Vancouver, BC.
             </p>
             <div className="flex justify-center">
-              <div className="text-center">
-                <Image
-                  src={headShot.src}
-                  alt={"Avatar about image"}
-                  width={400}
-                  height={400}
-                  className="mx-auto rounded-xl"
-                />
-              </div>
+              <Image
+                src={headShot.src}
+                alt="Avatar about image"
+                width={400}
+                height={400}
+                className="mx-auto rounded-xl"
+              />
             </div>
           </div>
           <div className="md:w-1/2">
@@ -39,16 +44,18 @@ const About = () => {
         </div>
       </div>
 
-      <div className="p-6">
+      {/* My approach Section */}
+      <section className="p-6">
         <div className="bg-cover p-7">
           <h2 className="font-cooper font-light text-6xl text-center">
             My approach
           </h2>
         </div>
         <ApproachContent />
-      </div>
+      </section>
 
-      <div className="p-6 bg-backgroundDark">
+      {/* Education & training Section */}
+      <section className="p-6 bg-backgroundDark">
         <div className="bg-cover p-7">
           <h2 className="font-cooper font-light text-6xl text-center">
             Education & training
@@ -66,11 +73,10 @@ const About = () => {
             </Sheet>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
-
 const List = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return <ul className="list-none pl-6 space-y-4">{children}</ul>;
 };
@@ -132,7 +138,7 @@ const EducationAndCertificationsContent = () => {
           body="BC Government, December 2024"
         />
       </List>
-      <br/>
+      <br />
       <h2 className="text-2xl font-semibold mb-4">Education</h2>
       <List>
         <EducationItem
