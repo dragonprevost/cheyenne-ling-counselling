@@ -1,40 +1,40 @@
 import type { Metadata } from "next";
-import { Monitor, MapPin } from "lucide-react";
-import Sheet from "@/components/Sheet";
+
+import { MapPin, Monitor } from "lucide-react";
+
+const HEADER_HEIGHT = 88;
+const FOOTER_HEIGHT = 80;
+
 
 export const metadata: Metadata = {
   title: "Book",
   description: "Book Cheyenne Ling Counselling.",
 };
 
-const Book = () => {
+const MainContent = () => {
   return (
-    <main className="flex flex-col min-h-screen bg-background text-onBackground relative overflow-hidden">
-      {/* Background image container with overlays */}
-      <div className="absolute inset-0 bg-cover bg-center z-0" style={{ backgroundImage: "url('/images/pale-sky.jpg')" }}>
+    <div
+      className="flex flex-col items-center justify-start bg-[url(/images/pale-sky.jpg)] bg-cover bg-center px-6 pt-[12vh]"
+      style={{ minHeight: `calc(100vh - ${HEADER_HEIGHT + FOOTER_HEIGHT}px)` }}
+    >
+      {/* Header Content */}
+      <div className="text-center">
+        <h1 className="text-6xl">Book a Session</h1>
+        <h4 className="mt-2 text-2xl">
+          Choose your preferred booking option below.
+        </h4>
       </div>
 
-      {/* Content */}
-      <div className="relative flex-grow flex flex-col items-center justify-start pt-[20vh] px-6 md:px-12 z-10">
-        {/* Heading */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-semibold text-primary mb-2">
-            Book a Session
-          </h1>
-          <p className="text-md md:text-lg text-muted-foreground">
-            Choose your preferred booking option below.
-          </p>
-        </div>
-
-        {/* Buttons */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
+      {/* Buttons */}
+      <div className="mt-12 w-full max-w-md">
+        <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between md:gap-16">
           {/* Book Online */}
           <a
             href="https://cheyennelingcounselling.janeapp.com/#/staff_member/1"
             aria-label="Book an online appointment"
-            className="flex items-center gap-2 rounded-lg px-6 py-3 bg-primary hover:bg-primary-light text-background text-lg shadow-md hover:shadow-lg transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+            className="flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-lg text-background shadow-md transition hover:bg-primary-light hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
           >
-            <Monitor className="w-5 h-5" />
+            <Monitor className="h-5 w-5" />
             Book online
           </a>
 
@@ -42,16 +42,24 @@ const Book = () => {
           <a
             href="https://qiintegratedhealth.janeapp.com/#/staff_member/363"
             aria-label="Book an in-person appointment"
-            className="flex items-center gap-2 rounded-lg px-6 py-3 bg-surface hover:bg-primary-light text-primary text-lg shadow-md hover:shadow-lg transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+            className="flex items-center gap-2 rounded-lg bg-surface px-6 py-3 text-lg text-primary shadow-md transition hover:bg-primary-light hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
           >
-            <MapPin className="w-5 h-5" />
+            <MapPin className="h-5 w-5" />
             Book in-person
           </a>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 
-export default Book;
 
+export default function Home() {
+  return (
+    <div>
+      <main className="flex-grow">
+        <MainContent />
+      </main>
+    </div>
+  );
+}

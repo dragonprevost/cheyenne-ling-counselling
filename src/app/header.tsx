@@ -24,15 +24,17 @@ const Header = () => {
             />
           </a>
           <span className="ml-3 text-xl font-semibold text-primary">
-            Cheyenne Ling
-            <br />
-            Counselling
+            <a href="/">
+              Cheyenne Ling
+              <br />
+              Counselling
+            </a>
           </span>
         </div>
 
         {/* Hamburger Icon */}
         <button
-          className="md:hidden text-secondary hover:text-secondaryDark"
+          className="md:hidden text-primary"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
