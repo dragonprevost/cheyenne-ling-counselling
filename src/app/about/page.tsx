@@ -194,7 +194,7 @@ const AboutFirstParagraphContent = () => {
         I understand how isolating and exhausting it can feel to be stuck in a
         cycle of depression, anxiety, grief, addiction, or low self-esteem.
         Through my own personal struggles with disordered eating, depression,
-        and anxiety, I've learned how important it is to have a welcoming space
+        and anxiety, I&apos;ve learned how important it is to have a welcoming space
         where you can express yourself freely, without judgment.
       </p>
       <p className="text-base indent-4 pt-3">
