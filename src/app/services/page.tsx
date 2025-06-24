@@ -1,4 +1,3 @@
-import Sheet from "@/components/Sheet";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
