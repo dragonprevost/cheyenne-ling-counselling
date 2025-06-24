@@ -38,7 +38,7 @@ const MainContent = () => {
           <a
             href="https://qiintegratedhealth.janeapp.com/#/staff_member/363"
             aria-label="Book an in-person appointment"
-            className="flex bg-surface-dark items-center gap-2 rounded-lg px-6 py-3 text-lg text-primary shadow-md transition hover:bg-primary-light hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+            className="flex bg-surfaceDark items-center gap-2 rounded-lg px-6 py-3 text-lg text-primary shadow-md transition hover:bg-primary-light hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
           >
             <MapPin className="h-5 w-5" />
             Book in-person
