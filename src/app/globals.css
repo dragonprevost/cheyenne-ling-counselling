@@ -29,6 +29,8 @@
     --secondary-dark: #bab7ad;
     --attention: #4c706d;
     --surface: #f7f3e9;
+    /*--surface-dark: #f2ede4;*/
+    --surface-dark: #fff;
   }
 }
 
