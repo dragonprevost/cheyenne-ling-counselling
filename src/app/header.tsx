@@ -60,6 +60,7 @@ const Header = () => {
 const NavLinks = ({ vertical = false }: { vertical?: boolean }) => {
   const baseClass = "text-primary hover:text-primaryDark";
   const layout = vertical ? "block" : "";
+  const bookingLayout = vertical ? "bg-primary text-surface" : "bg-foreground text-primary ";
   return (
     <>
       <a href="/about" className={`${baseClass} ${layout}`}>
@@ -76,7 +77,7 @@ const NavLinks = ({ vertical = false }: { vertical?: boolean }) => {
       </a>
       <a
         href="/book"
-        className={`inline-block px-4 py-2 rounded-md text-primary bg-foreground transition-colors ${layout}`}
+        className={`inline-block px-4 py-2 rounded-md text-primary transition-colors ${layout} ${bookingLayout}`}
       >
         Book now
       </a>
