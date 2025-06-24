@@ -66,14 +66,14 @@ const NavLinks = ({ vertical = false }: { vertical?: boolean }) => {
       <a href="/about" className={`${baseClass} ${layout}`}>
         About
       </a>
-      <a href="/contact" className={`${baseClass} ${layout}`}>
-        Contact
-      </a>
       <a href="/focus" className={`${baseClass} ${layout}`}>
         Areas of focus
       </a>
       <a href="/services" className={`${baseClass} ${layout}`}>
         Services
+      </a>
+      <a href="/contact" className={`${baseClass} ${layout}`}>
+        Contact
       </a>
       <a
         href="/book"
