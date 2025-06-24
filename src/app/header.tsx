@@ -1,8 +1,6 @@
 "use client";
 import { useState } from "react";
-// import Image from "next/image";
 import { Menu, X } from "lucide-react"; // You can use another icon if you prefer
-// import logoImg from "../../public/logo-tree.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,16 +12,29 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo Section */}
         <div className="flex items-center">
-          <span className="ml-3 text-xl font-semibold text-primary">
-            Cheyenne Ling
-            <br />
-            Counselling
+          {/*
+          <a href="/">
+            <Image
+              className="dark:invert"
+              src={logoImg}
+              alt="Company Logo"
+              width={40}
+              height={40}
+            />
+          </a>
+          */}
+          <span className="text-xl font-semibold text-primary">
+            <a href="/">
+              Cheyenne Ling
+              <br />
+              Counselling
+            </a>
           </span>
         </div>
 
         {/* Hamburger Icon */}
         <button
-          className="md:hidden text-secondary hover:text-secondaryDark"
+          className="md:hidden text-primary"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -49,9 +60,6 @@ const Header = () => {
 const NavLinks = ({ vertical = false }: { vertical?: boolean }) => {
   const baseClass = "text-primary hover:text-primaryDark";
   const layout = vertical ? "block" : "";
-  if (true) {
-    return <></>;
-  }
   return (
     <>
       <a href="/about" className={`${baseClass} ${layout}`}>
@@ -60,14 +68,11 @@ const NavLinks = ({ vertical = false }: { vertical?: boolean }) => {
       <a href="/contact" className={`${baseClass} ${layout}`}>
         Contact
       </a>
-      <a href="/faqs" className={`${baseClass} ${layout}`}>
-        FAQs
-      </a>
       <a href="/focus" className={`${baseClass} ${layout}`}>
         Areas of focus
       </a>
-      <a href="/offerings" className={`${baseClass} ${layout}`}>
-        Offerings
+      <a href="/services" className={`${baseClass} ${layout}`}>
+        Services
       </a>
       <a
         href="/book"
