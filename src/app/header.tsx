@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { Menu, X } from "lucide-react"; // You can use another icon if you prefer
-import logoImg from "../../public/logo-tree.png";
+// import logoImg from "../../public/logo-tree.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,6 +14,7 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo Section */}
         <div className="flex items-center">
+          {/*
           <a href="/">
             <Image
               className="dark:invert"
@@ -23,7 +24,8 @@ const Header = () => {
               height={40}
             />
           </a>
-          <span className="ml-3 text-xl font-semibold text-primary">
+          */}
+          <span className="text-xl font-semibold text-primary">
             <a href="/">
               Cheyenne Ling
               <br />
@@ -69,14 +71,11 @@ const NavLinks = ({ vertical = false }: { vertical?: boolean }) => {
       <a href="/contact" className={`${baseClass} ${layout}`}>
         Contact
       </a>
-      <a href="/faqs" className={`${baseClass} ${layout}`}>
-        FAQs
-      </a>
       <a href="/focus" className={`${baseClass} ${layout}`}>
         Areas of focus
       </a>
-      <a href="/offerings" className={`${baseClass} ${layout}`}>
-        Offerings
+      <a href="/services" className={`${baseClass} ${layout}`}>
+        Services
       </a>
       <a
         href="/book"

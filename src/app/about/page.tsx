@@ -17,7 +17,7 @@ const About = () => {
     <>
       {/* Top Section with bg image filling viewport minus header */}
       <div
-        className="bg-[url(/images/winter-tree-top.jpg)] bg-cover bg-center p-6 flex items-center"
+        className="bg-[url(/images/mixed-flowers.jpg)] bg-cover bg-center p-6 flex items-center"
         style={{ minHeight: `calc(100vh - ${HEADER_HEIGHT + FOOTER_HEIGHT}px)` }}
       >
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 w-full">

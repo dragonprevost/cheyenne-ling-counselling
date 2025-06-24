@@ -22,14 +22,13 @@
   :root {
     --background: #F4F1EE;
     --background-dark: #A9C5D3;
-    --foreground: #d2cfc4;
+    --foreground: #f7f3e9;
     --primary: #333333;
     --primary-dark: #333333;
-    --secondary: #d2cfc4;
+    --secondary: #f7f3e9;
     --secondary-dark: #bab7ad;
     --attention: #4c706d;
-    --surface: #e8e3df;
-    --surface: #e8e3df;
+    --surface: #f7f3e9;
   }
 }
 
