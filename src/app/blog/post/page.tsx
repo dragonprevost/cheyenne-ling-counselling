@@ -5,8 +5,8 @@ import ParagraphLink from "../../../components/ParagraphLink";
 
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "Cheyenne Ling - Blog posts.",
+  title: "Feeling ‘Too Emotional’ in Your Relationship? Understanding Why Your Feelings Can Feel So Intense",
+  description: "Feeling overwhelmed in your relationship? Discover how past experiences may be impacting your current relationships and emotions and how online counselling can help.",
 };
 
 const MainContent = () => {
