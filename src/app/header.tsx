@@ -75,6 +75,9 @@ const NavLinks = ({ vertical = false }: { vertical?: boolean }) => {
       <a href="/contact" className={`${baseClass} ${layout}`}>
         Contact
       </a>
+      <a href="/blog" className={`${baseClass} ${layout}`}>
+        Blog
+      </a>
       <a
         href="/book"
         className={`inline-block px-4 py-2 rounded-md text-primary transition-colors ${layout} ${bookingLayout}`}
