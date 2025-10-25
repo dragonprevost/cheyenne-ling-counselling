@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+
+import Image from "next/image";
 import coupleSunsetImage from "/public/images/blogs/couple-sunset.jpg";
 
 
@@ -17,7 +19,7 @@ interface BlogPostPreviewProps {
 }
 
 const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
-  imageUrl,
+  image,
   title,
   description,
   href,
@@ -26,10 +28,10 @@ const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
     <div className="flex flex-col rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-lg transition max-w-sm ">
       {/* Image Banner */}
       <div className="h-48 w-full overflow-hidden">
-        <img
-          src={imageUrl}
-          alt={title}
-          className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+        <Image
+          src={image}
+          alt="Understanding emotions in relationships"
+          className="object-cover"
         />
       </div>
 
@@ -60,7 +62,7 @@ const MainContent = () => {
     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <BlogPostPreview 
             href={"blog/post"} 
-            imageUrl={coupleSunsetImage.src} 
+            image={coupleSunsetImage} 
             title={"Feeling ‘Too Emotional’ in Your Relationship? Understanding Why Your Emotions Can Feel So Intense"} 
             description={"Feeling overwhelmed in your relationship? Discover how past experiences may be impacting your current relationships and emotions and how online counselling can help."} 
           />

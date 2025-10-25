@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import Image from "next/image";
 import banner from "/public/images/blogs/couple-sunset.jpg";
 import ParagraphLink from "../../../components/ParagraphLink";
 
@@ -15,10 +15,10 @@ const MainContent = () => {
       <h1 className="text-5xl text-primary font-bold">
         Feeling ‘Too Emotional’ in Your Relationship? Understanding Why Your Feelings Can Feel So Intense
       </h1>
-      <img
-        src={banner.src}
+      <Image
+        src={banner}
         alt="Understanding emotions in relationships"
-        className="object-cover rounded-xl flex-shrink-0"
+        className="object-cover rounded-xl"
       />
       <p className="text-gray-500 text-sm italic">
         Feeling overwhelmed in your relationship? Discover how past experiences may be impacting your current relationships and emotions and how online counselling can help.
@@ -128,7 +128,7 @@ const MainContent = () => {
 export default function Home() {
   return (
     <div>
-      <div className="container mx-auto p-6">
+      <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-20 py-8">
         <main className="flex-grow">
           <MainContent />
         </main>
