@@ -57,17 +57,13 @@ const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
 
 const MainContent = () => {
   return (
-    <div>
-      <ul>
-        <li className="mb-5">
+    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <BlogPostPreview 
             href={"blog/post"} 
             imageUrl={coupleSunsetImage.src} 
             title={"Feeling ‘Too Emotional’ in Your Relationship? Understanding Why Your Emotions Can Feel So Intense"} 
             description={"Feeling overwhelmed in your relationship? Discover how past experiences may be impacting your current relationships and emotions and how online counselling can help."} 
           />
-        </li>
-      </ul>
     </div>
   );
 };
