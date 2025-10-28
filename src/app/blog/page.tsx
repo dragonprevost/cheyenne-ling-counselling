@@ -62,16 +62,16 @@ const MainContent = () => {
   return (
     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <BlogPostPreview 
-          href={"blog/understanding_emotions_in_relationships"} 
-          image={coupleSunsetImage} 
-          title={"Feeling ‘Too Emotional’ in Your Relationship? Understanding Why Your Emotions Can Feel So Intense"} 
-          description={"Feeling overwhelmed in your relationship? Discover how past experiences may be impacting your current relationships and emotions and how online counselling can help."} 
-        />
-        <BlogPostPreview 
           href={"blog/attachment_theory"} 
           image={attacmentImage} 
           title={"Why You Pull Away or Hold On Too Tight: How Attachment Styles Shape Your Relationships"} 
           description={"Do you pull away or feel ‘too emotional’ in relationships? Discover how counselling in Kitsilano, Vancouver or online can help you build secure, connected relationships."} 
+        />
+        <BlogPostPreview 
+          href={"blog/understanding_emotions_in_relationships"} 
+          image={coupleSunsetImage} 
+          title={"Feeling ‘Too Emotional’ in Your Relationship? Understanding Why Your Emotions Can Feel So Intense"} 
+          description={"Feeling overwhelmed in your relationship? Discover how past experiences may be impacting your current relationships and emotions and how online counselling can help."} 
         />
     </div>
   );
