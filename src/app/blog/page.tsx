@@ -60,13 +60,11 @@ const MainContent = () => {
   return (
     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       <BlogPostPreview
-        href={"blog/attachment_theory"}
-        image={attacmentImage}
-        title={
-          "Why You Pull Away or Hold On Too Tight: How Attachment Styles Shape Your Relationships"
-        }
+        href={"blog/effect_of_childhood_on_communication"}
+        image={coupleArgumentImage}
+        title={"How Childhood Shapes Communication in Adult Relationships"}
         description={
-          "Do you pull away or feel ‘too emotional’ in relationships? Discover how counselling in Kitsilano, Vancouver or online can help you build secure, connected relationships."
+          "Explore how your childhood experiences may shape the way you communicate and connect in adult relationships. Learn how Emotionally Focused Individual Therapy in Kitsilano or online can help you build secure, connected relationships."
         }
       />
       <BlogPostPreview
@@ -80,11 +78,13 @@ const MainContent = () => {
         }
       />
       <BlogPostPreview
-        href={"blog/effect_of_childhood_on_communication"}
-        image={coupleArgumentImage}
-        title={"How Childhood Shapes Communication in Adult Relationships"}
+        href={"blog/attachment_theory"}
+        image={attacmentImage}
+        title={
+          "Why You Pull Away or Hold On Too Tight: How Attachment Styles Shape Your Relationships"
+        }
         description={
-          "Explore how your childhood experiences may shape the way you communicate and connect in adult relationships. Learn how Emotionally Focused Individual Therapy in Kitsilano or online can help you build secure, connected relationships."
+          "Do you pull away or feel ‘too emotional’ in relationships? Discover how counselling in Kitsilano, Vancouver or online can help you build secure, connected relationships."
         }
       />
     </div>

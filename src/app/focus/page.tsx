@@ -62,10 +62,10 @@ const AreasOfFocusList = () => {
   return (
     <div>
       <Row
-        title="Anxiety & Stress"
-        body="The demands of life can be overwhelming, often leading to anxiety and stress. Whether you're managing work or school pressures, navigating relationships, or facing uncertainty, I offer a supportive space to safely explore these feelings. Together, we'll uncover the emotional triggers behind your anxiety and understand the messages your feelings are trying to communicate. By bringing awareness and understanding to these emotions, we can work towards lasting change and better emotional regulation."
-        imgSrc={dahlia.src}
-        caption="Overthinking • Perfectionism • Fear"
+        title="Relationship & Interpersonal Issues"
+        body="I support individuals in navigating misunderstandings, improving communication, and setting healthy boundaries with partners, family members, friends, or colleagues. In our work together, we will explore how early relationship patterns and attachment styles may impact your current relationships and identify ways to foster stronger more fulfilling relationships."
+        imgSrc={shroom.src}
+        caption="Communication • Navigating Separation • Boundaries"
         reverse={false}
       />
       <hr />
@@ -78,10 +78,10 @@ const AreasOfFocusList = () => {
       />
       <hr />
       <Row
-        title="Relationship & Interpersonal Issues"
-        body="I support individuals in navigating misunderstandings, improving communication, and setting healthy boundaries with partners, family members, friends, or colleagues. In our work together, we will explore how early relationship patterns and attachment styles may impact your current relationships and identify ways to foster stronger more fulfilling relationships."
-        imgSrc={shroom.src}
-        caption="Communication • Navigating Separation • Boundaries"
+        title="Anxiety & Stress"
+        body="The demands of life can be overwhelming, often leading to anxiety and stress. Whether you're managing work or school pressures, navigating relationships, or facing uncertainty, I offer a supportive space to safely explore these feelings. Together, we'll uncover the emotional triggers behind your anxiety and understand the messages your feelings are trying to communicate. By bringing awareness and understanding to these emotions, we can work towards lasting change and better emotional regulation."
+        imgSrc={dahlia.src}
+        caption="Overthinking • Perfectionism • Fear"
         reverse={false}
       />
       <hr />

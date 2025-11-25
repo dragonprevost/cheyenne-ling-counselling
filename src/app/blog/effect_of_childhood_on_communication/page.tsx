@@ -185,7 +185,7 @@ const MainContent = () => {
       <p>
         Understanding how your early experiences may have shaped the way you
         communicate is the first step toward change. The same patterns that once
-        helped you feel safe such as people- pleasing, shutting down, seeking
+        helped you feel safe such as people-pleasing, shutting down, seeking
         reassurance, or blaming can be explored and transformed through therapy.
       </p>
       <p>

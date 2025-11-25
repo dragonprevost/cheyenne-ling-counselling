@@ -159,6 +159,7 @@ const EducationAndCertificationsContent = () => {
 const ApproachContent = () => {
   return (
     <div className="text-lg">
+      
       <p className="indent-4 pt-3 text-base">
         My approach to therapy is trauma-informed and person-centred,
         recognizing the profound impact that past experiences can have on
