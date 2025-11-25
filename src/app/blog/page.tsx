@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import {StaticImageData} from "next/image";
 import coupleSunsetImage from "/public/images/blogs/couple-sunset.jpg";
+import coupleArgumentImage from "/public/images/blogs/couple-argument.jpg";
 import attacmentImage from "/public/images/blogs/attachment-image.jpg";
 
 
@@ -72,6 +73,12 @@ const MainContent = () => {
           image={coupleSunsetImage} 
           title={"Feeling ‘Too Emotional’ in Your Relationship? Understanding Why Your Emotions Can Feel So Intense"} 
           description={"Feeling overwhelmed in your relationship? Discover how past experiences may be impacting your current relationships and emotions and how online counselling can help."} 
+        />
+        <BlogPostPreview 
+          href={"blog/effect_of_childhood_on_communication"} 
+          image={coupleArgumentImage} 
+          title={"How Childhood Shapes Communication in Adult Relationships"}
+          description={"Explore how your childhood experiences may shape the way you communicate and connect in adult relationships. Learn how Emotionally Focused Individual Therapy in Kitsilano or online can help you build secure, connected relationships."} 
         />
     </div>
   );
