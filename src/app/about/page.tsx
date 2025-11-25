@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import headShot from "/public/images/head-shot.jpg";
 
-
 export const metadata: Metadata = {
   title: "About",
   description: "About Cheyenne Ling Counselling.",
@@ -18,7 +17,9 @@ const About = () => {
       {/* Top Section with bg image filling viewport minus header */}
       <div
         className="bg-[url(/images/mixed-flowers.jpg)] bg-cover bg-center p-6 flex items-center"
-        style={{ minHeight: `calc(100vh - ${HEADER_HEIGHT + FOOTER_HEIGHT}px)` }}
+        style={{
+          minHeight: `calc(100vh - ${HEADER_HEIGHT + FOOTER_HEIGHT}px)`,
+        }}
       >
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 w-full">
           <div className="md:w-1/2 text-onBackground">
@@ -194,8 +195,8 @@ const AboutFirstParagraphContent = () => {
         I understand how isolating and exhausting it can feel to be stuck in a
         cycle of depression, anxiety, grief, addiction, or low self-esteem.
         Through my own personal struggles with disordered eating, depression,
-        and anxiety, I&apos;ve learned how important it is to have a welcoming space
-        where you can express yourself freely, without judgment.
+        and anxiety, I&apos;ve learned how important it is to have a welcoming
+        space where you can express yourself freely, without judgment.
       </p>
       <p className="text-base indent-4 pt-3">
         My personal experiences inspired me to pursue a Bachelor of Science

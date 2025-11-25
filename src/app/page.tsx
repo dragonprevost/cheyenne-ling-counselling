@@ -3,8 +3,6 @@ import { MapPin, Monitor } from "lucide-react";
 const HEADER_HEIGHT = 88;
 const FOOTER_HEIGHT = 80;
 
-
-
 const MainContent = () => {
   return (
     <div
@@ -48,7 +46,6 @@ const MainContent = () => {
     </div>
   );
 };
-
 
 export default function Home() {
   return (

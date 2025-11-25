@@ -5,7 +5,6 @@ import { MapPin, Monitor } from "lucide-react";
 const HEADER_HEIGHT = 88;
 const FOOTER_HEIGHT = 80;
 
-
 export const metadata: Metadata = {
   title: "Book",
   description: "Book Cheyenne Ling Counselling.",
@@ -52,7 +51,6 @@ const MainContent = () => {
     </div>
   );
 };
-
 
 export default function Home() {
   return (

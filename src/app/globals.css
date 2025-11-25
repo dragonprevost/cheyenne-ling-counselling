@@ -11,8 +11,8 @@
 * */
 
 :root {
-  --background: #F4F1EE;
-  --background-dark: #A9C5D3;
+  --background: #f4f1ee;
+  --background-dark: #a9c5d3;
   --foreground: #f7f3e9;
   --primary: #333333;
   --primary-dark: #333333;
@@ -25,8 +25,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #F4F1EE;
-    --background-dark: #A9C5D3;
+    --background: #f4f1ee;
+    --background-dark: #a9c5d3;
     --foreground: #f7f3e9;
     --primary: #333333;
     --primary-dark: #333333;
@@ -41,8 +41,7 @@
 body {
   color: var(--primary);
   background: var(--background);
-  font-family:
-    Souviner,
+  font-family: Souviner;
 }
 
 @font-face {

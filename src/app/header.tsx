@@ -60,7 +60,9 @@ const Header = () => {
 const NavLinks = ({ vertical = false }: { vertical?: boolean }) => {
   const baseClass = "text-primary hover:text-primaryDark";
   const layout = vertical ? "block" : "";
-  const bookingLayout = vertical ? "bg-primary text-surface" : "bg-foreground text-primary ";
+  const bookingLayout = vertical
+    ? "bg-primary text-surface"
+    : "bg-foreground text-primary ";
   return (
     <>
       <a href="/about" className={`${baseClass} ${layout}`}>

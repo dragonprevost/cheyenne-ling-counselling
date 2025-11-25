@@ -7,10 +7,7 @@ interface ParagraphLinkProps {
 
 const ParagraphLink = ({ href, children }: ParagraphLinkProps) => {
   return (
-    <a
-      href={href}
-      className="underline"
-    >
+    <a href={href} className="underline">
       {children}
     </a>
   );

@@ -12,7 +12,10 @@ export const metadata: Metadata = {
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-4 text-center mt-auto">
-      <p>&copy; 2025 Cheyenne Ling Counselling.<br/> All rights reserved.</p>
+      <p>
+        &copy; 2025 Cheyenne Ling Counselling.
+        <br /> All rights reserved.
+      </p>
     </footer>
   );
 };
