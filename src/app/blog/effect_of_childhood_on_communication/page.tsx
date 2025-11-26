@@ -106,7 +106,7 @@ const MainContent = () => {
       </h1>
       <p>
         Early communication with caregivers shapes your{" "}
-        <ParagraphLink href="https://cheyennelingcounselling.com/blog/attachment_theory">
+        <ParagraphLink href="/blog/attachment_theory">
           attachment style
         </ParagraphLink>
         , which in turn influences how you connect, express emotions, and handle

@@ -24,10 +24,6 @@ const About = () => {
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 w-full">
           <div className="md:w-1/2 text-onBackground">
             <h2 className="font-cooper text-7xl mb-4">About</h2>
-            <p className="text-base text-gray-600 mb-4">
-              Welcome to my page! I’m Cheyenne, a Registered Clinical Counsellor
-              (RCC) based in Vancouver, BC.
-            </p>
             <div className="flex justify-center">
               <Image
                 src={headShot.src}
@@ -159,7 +155,6 @@ const EducationAndCertificationsContent = () => {
 const ApproachContent = () => {
   return (
     <div className="text-lg">
-      
       <p className="indent-4 pt-3 text-base">
         My approach to therapy is trauma-informed and person-centred,
         recognizing the profound impact that past experiences can have on
@@ -192,46 +187,44 @@ const ApproachContent = () => {
 const AboutFirstParagraphContent = () => {
   return (
     <div className="text-lg">
-      <p className="indent-4 pt-3 text-base">
-        I understand how isolating and exhausting it can feel to be stuck in a
-        cycle of depression, anxiety, grief, addiction, or low self-esteem.
-        Through my own personal struggles with disordered eating, depression,
-        and anxiety, I&apos;ve learned how important it is to have a welcoming
-        space where you can express yourself freely, without judgment.
+      <p className="text-base indent-4 pt-3">
+        Welcome to my page! I’m Cheyenne, a Registered Clinical Counsellor (RCC)
+        based in Vancouver, BC.
       </p>
       <p className="text-base indent-4 pt-3">
-        My personal experiences inspired me to pursue a Bachelor of Science
-        degree in Psychology (with distinction), which led me to work in a
-        neuropsychology program as a psychometrist. In this role, I administered
-        psychometric tests for neurological and mental health conditions,
-        including Parkinson&apos;s disease, substance use, and depression.
-        <br />
+        Struggling to trust others or finding yourself stuck in the same painful
+        relationship patterns can feel confusing and lonely. Many people I work
+        with have learned to protect themselves by shutting down or holding in
+        their emotions, even when they long for closeness. My role in
+        counselling is to help you explore how past experiences may be shaping
+        your current relationships, understand the patterns that have formed,
+        and work toward creating more secure and fulfilling connections.
       </p>
       <p className="text-base indent-4 pt-3">
-        Subsequently, I decided to pursue my goal of becoming a Registered
-        Clinical Counsellor by obtaining a Master of Arts in Counselling
-        Psychology. This path has allowed me to work in a field that aligns with
-        my passion for creating safe, non-judgmental spaces where people can
-        explore their emotions and navigate life&apos;s challenges. I am deeply
-        honoured to collaborate with individuals as they explore their inner
-        worlds and journeys toward healing.
-        <br />
+        As a Registered Clinical Counsellor (RCC), I use Emotionally Focused
+        Individual Therapy (EFIT) to help you understand how past relational
+        wounds may be shaping your emotions, relationships, and sense of safety
+        today. My approach is trauma-informed, person-centred, and grounded in
+        the belief that every emotion carries valuable information. Together,
+        we’ll slow down, tune into your inner world, and support the parts of
+        you that learned to protect, numb, or disconnect to cope.
       </p>
       <p className="text-base indent-4 pt-3">
-        Outside of my practice, I enjoy spending time in the forest, gardening,
-        connecting with family and friends, and listening to music while on a
-        run. I also love keeping up with the latest counselling research through
-        podcasts and books, as well as deepening my understanding of
-        psychedelic-assisted psychotherapy.
-        <br />
+        My path to becoming a counsellor grew out of my own lived experiences
+        with disordered eating, depression, and anxiety. My personal journey of
+        healing has taught me the importance of a welcoming space where you can
+        openly express your experiences without judgment.
       </p>
       <p className="text-base indent-4 pt-3">
-        I acknowledge the privilege and responsibility I hold in living and
-        working on the unceded, ancestral territories of the xʷməθkʷəy̓əm
-        (Musqueam), Sḵwx̱wú7mesh (Squamish), and səlilwətaɬ (Tsleil-Waututh)
-        Nations. I feel deeply grateful to be on this beautiful and abundant
-        land. What I value most is holding space for the full range of human
-        emotions. In our space, all feelings are always welcome!
+        Outside of therapy, I love spending time in the forest, gardening,
+        weightlifting, running with music, and staying curious about the latest
+        counselling research, especially in psychedelic-assisted psychotherapy.
+        I am grateful to live and work on the unceded territories of the
+        Musqueam, Squamish, and Tsleil-Waututh Nations.
+      </p>
+      <p className="text-base indent-4 pt-3">
+        In our work together, all emotions are welcome. If you feel we might be
+        a good fit, I’d love to connect.
       </p>
     </div>
   );
