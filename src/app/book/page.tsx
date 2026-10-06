@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { MapPin, Monitor } from "lucide-react";
 
 import FullBleedHero from "@/components/layout/FullBleedHero";
-import { H1, H2 } from "@/components/layout/Heading";
+import { H1 } from "@/components/layout/Heading";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -23,7 +23,9 @@ const MainContent = () => {
       {/* Header Content */}
       <div className="text-center">
         <H1>Book a Session</H1>
-        <H2 className="mt-2">Choose your preferred booking option below.</H2>
+        <p className="mt-2 text-lg font-normal">
+          Choose your preferred booking option below
+        </p>
       </div>
 
       {/* Buttons */}

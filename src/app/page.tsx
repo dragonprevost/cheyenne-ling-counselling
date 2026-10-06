@@ -25,13 +25,14 @@ const Hero = () => {
     >
       {/* Header Content */}
       <div className="text-center">
-        <p className="text-xl font-semibold">Welcome to</p>
         <H1>Cheyenne Ling Counselling</H1>
-        <H2 className="mt-3">
+        <p className="mt-3 text-lg font-normal">
           Registered Clinical Counsellor in Kitsilano, Vancouver
           <br />
           and online across BC
-        </H2>
+          <br />
+          1764 W 7th Ave, Vancouver, BC V6J 5A3
+        </p>
       </div>
 
       {/* Buttons */}
@@ -66,7 +67,7 @@ const Intro = () => {
   return (
     <PageContainer maxWidth="max-w-3xl" className="text-center">
       <p className="text-lg indent-0">
-        I&apos;m Cheyenne Ling, a Registered Clinical Counsellor (RCC) based in
+        I&apos;m Cheyenne, a Registered Clinical Counsellor (RCC) based in
         Kitsilano, Vancouver, offering in-person and online counselling across
         British Columbia. I specialize in{" "}
         <b>Emotionally Focused Individual Therapy (EFIT)</b>, a trauma-informed,
@@ -86,7 +87,7 @@ const FocusAreas = () => {
     },
     {
       title: "Trauma & PTSD",
-      body: "Compassionate, trauma-informed support to rebuild a sense of safety and move toward healing.",
+      body: "Work through distressing memories and experiences, including trauma and PTSD, using approaches like EMDR, so they feel less overwhelming and more like something in the past.",
     },
     {
       title: "Anxiety & Stress",
@@ -94,7 +95,7 @@ const FocusAreas = () => {
     },
     {
       title: "Grief & Loss",
-      body: "Process loss and life transitions with compassion, at your own pace.",
+      body: "Find support through the loss of a loved one, a relationship, or a major life transition, with space to grieve and rebuild a sense of meaning at your own pace.",
     },
   ];
 
@@ -124,9 +125,10 @@ const AboutTeaser = () => {
       <H2>My Approach</H2>
       <p className="mt-4 text-lg">
         My approach is trauma-informed and person-centred, drawing on
-        Emotionally Focused Individual Therapy (EFIT), Internal Family Systems
-        (IFS), and cognitive-behavioural therapy (CBT) to help you understand
-        your emotions and build the relationships you want.
+        Emotionally Focused Individual Therapy (EFIT), Eye Movement
+        Desensitization and Reprocessing (EMDR), and cognitive-behavioural
+        therapy (CBT) to help you understand your emotions and build the
+        relationships you want.
       </p>
       <div className="mt-6 flex flex-wrap items-center justify-center gap-6">
         <StyledLink href="/about">Learn more about me</StyledLink>

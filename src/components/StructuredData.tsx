@@ -67,7 +67,7 @@ export default function StructuredData() {
           "Emotionally Focused Individual Therapy (EFIT)",
           "Attachment theory",
           "Trauma-informed counselling",
-          "Internal Family Systems (IFS)",
+          "Eye Movement Desensitization and Reprocessing (EMDR)",
         ],
       },
     ],

@@ -82,7 +82,7 @@ const AreasOfFocusList = () => {
         body="Experiencing trauma, whether from a single event or ongoing distress, can have a profound and pervasive effect on the mind, body and emotions. If past events continue to trigger painful memories, anxiety, or emotional numbness, I’m here to support you. My approach is compassionate, trauma-informed, and tailored to your unique pace. I’ll support you rebuilding your sense of safety and moving towards healing."
         imgSrc={fiddleHead.src}
         imgAlt="Unfurling fiddlehead fern, symbolizing healing and trauma recovery"
-        caption="Safety • Healing • Integrating"
+        caption="Safety • Processing • Integrating"
         reverse={true}
       />
       <hr />

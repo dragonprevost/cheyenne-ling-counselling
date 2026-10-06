@@ -2,7 +2,6 @@ import Sheet from "@/components/Sheet";
 import type { Metadata } from "next";
 import Image from "next/image";
 import headShot from "/public/images/head-shot.jpg";
-import FullBleedHero from "@/components/layout/FullBleedHero";
 import { H1, H2, H3 } from "@/components/layout/Heading";
 import Prose from "@/components/layout/Prose";
 import { pageMetadata } from "@/lib/seo";
@@ -17,12 +16,12 @@ export const metadata: Metadata = pageMetadata({
 const About = () => {
   return (
     <>
-      {/* Top Section with bg image filling viewport minus header */}
-      <FullBleedHero
-        backgroundImage="/images/mixed-flowers.jpg"
-        className="flex items-center"
+      {/* Top Section: sized to its content, not the full viewport */}
+      <div
+        className="bg-cover bg-center px-6 py-12 md:py-20"
+        style={{ backgroundImage: "url(/images/mixed-flowers.jpg)" }}
       >
-        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 w-full">
+        <div className="flex flex-col md:flex-row items-start gap-6 md:gap-12 w-full">
           <div className="md:w-1/2 text-onBackground">
             <H1 className="mb-4">About</H1>
             <div className="flex justify-center">
@@ -41,7 +40,7 @@ const About = () => {
             </Sheet>
           </div>
         </div>
-      </FullBleedHero>
+      </div>
 
       {/* My approach Section */}
       <section className="p-6">
@@ -96,11 +95,11 @@ const TrainingsContent = () => {
       <List>
         <EducationItem
           title="Fundamentals of Psilocybin-Assisted Psychotherapy Training Program"
-          body="TheraPsil, November 2024 (in progress)"
+          body="TheraPsil, November 2024"
         />
         <EducationItem
-          title="Complete Internal Family Systems Therapy (IFS) Immersion"
-          body="PESI — In progress"
+          title="EMDR Training: Integrating EMDR into Your Clinical Practice"
+          body="EMDR Consulting, September 2026"
         />
         <EducationItem
           title="Level 1 Certificate Course in Emotionally Focused Individual Therapy"
@@ -169,9 +168,12 @@ const ApproachContent = () => {
         we need to hear, and that every feeling serves a purpose. Therefore, I
         incorporate Emotion-Focused Individual Therapy (EFIT), guiding you to
         explore and process emotions in a meaningful way, helping you understand
-        and integrate your feelings. Furthermore, I use Internal Family Systems
-        (IFS) to help you connect with and heal different parts of yourself,
-        fostering greater self-understanding and inner harmony. This integrative
+        and integrate your feelings. I incorporate Eye Movement Desensitization
+        and Reprocessing (EMDR) to help you process distressing or traumatic
+        experiences that may continue to affect how you feel, think, or respond
+        in the present. EMDR can be particularly helpful when past experiences
+        continue to bring up strong emotions, physical sensations, distressing
+        thoughts, or difficulties with sleep. This integrative
         framework offers flexible treatment, combining various therapeutic
         modalities tailored to your unique needs. I also place a strong emphasis
         on the quality of our connection, recognizing the importance of the

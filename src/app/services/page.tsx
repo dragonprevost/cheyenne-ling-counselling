@@ -45,7 +45,7 @@ const Offerings = () => {
       <InfoCard
         title="Individual Counselling"
         price="$140"
-        body="Standard counselling sessions are 50 minutes long. I offer both online and in-person sessions in Kitsilano, Vancouver for adults seeking a supportive, warm, and non-judgmental approach to navigating life’s challenges, including Emotionally Focused Individual Therapy (EFIT). In our sessions, you’ll have the space to unpack your thoughts and emotions at your own pace. Together, we’ll work towards understanding the patterns in your life, uncovering the roots of your challenges, and creating a path forward that aligns with your authentic self."
+        body="Standard counselling sessions are 50 minutes long. I offer online and in-person counselling in Kitsilano, Vancouver for adults seeking a warm, supportive, and non-judgmental space to navigate life’s challenges. I draw from Emotionally Focused Individual Therapy (EFIT) and Eye Movement Desensitization and Reprocessing (EMDR) to support you in understanding your emotions, processing difficult experiences, and creating meaningful change at your own pace."
       />
       <InfoCard
         title="Extended Session"
@@ -67,7 +67,7 @@ export default function MainContent() {
       <PageContainer>
         <H1 className="mb-6">Counselling Services & Pricing</H1>
         <Offerings />
-        <div className="px-8 pb-8 pt-8">
+        <div className="px-8 pb-8 pt-8 flex justify-center">
           <Link
             href="/book"
             className="inline-block px-4 py-2 rounded-md bg-primary text-background transition-colors hover:bg-primary-light"

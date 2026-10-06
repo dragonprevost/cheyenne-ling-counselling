@@ -132,7 +132,8 @@ const MainContent = () => {
       <p>
         Through counselling approaches like{" "}
         <b>Emotionally Focused Therapy (EFT)</b> and{" "}
-        <b>Internal Family Systems (IFS)</b>, I will support you:
+        <b>Eye Movement Desensitization and Reprocessing (EMDR)</b>, I will
+        support you:
       </p>
       <ul className="list-disc list-inside ml-4">
         <li>
