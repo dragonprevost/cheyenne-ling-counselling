@@ -5,14 +5,18 @@ import { StaticImageData } from "next/image";
 import coupleSunsetImage from "/public/images/blogs/couple-sunset.jpg";
 import coupleArgumentImage from "/public/images/blogs/couple-argument.jpg";
 import attacmentImage from "/public/images/blogs/attachment-image.jpg";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Blog posts",
-  description: "Cheyenne Ling - Blog posts.",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Blog",
+  description:
+    "Articles on attachment, emotions, and relationships from Cheyenne Ling, RCC, offering Emotionally Focused Individual Therapy (EFIT) in Kitsilano, Vancouver and online across BC.",
+  path: "/blog",
+});
 
 interface BlogPostPreviewProps {
   image: StaticImageData;
+  imageAlt: string;
   title: string;
   description: string;
   href: string;
@@ -20,6 +24,7 @@ interface BlogPostPreviewProps {
 
 const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
   image,
+  imageAlt,
   title,
   description,
   href,
@@ -28,11 +33,7 @@ const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
     <div className="flex flex-col rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-lg transition max-w-sm ">
       {/* Image Banner */}
       <div className="h-48 w-full overflow-hidden">
-        <Image
-          src={image}
-          alt="Understanding emotions in relationships"
-          className="object-cover"
-        />
+        <Image src={image} alt={imageAlt} className="object-cover" />
       </div>
 
       {/* Content */}
@@ -60,16 +61,18 @@ const MainContent = () => {
   return (
     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       <BlogPostPreview
-        href={"blog/effect_of_childhood_on_communication"}
+        href={"/blog/effect_of_childhood_on_communication"}
         image={coupleArgumentImage}
+        imageAlt="Couple arguing, representing childhood communication patterns in adult relationships"
         title={"How Childhood Shapes Communication in Adult Relationships"}
         description={
           "Explore how your childhood experiences may shape the way you communicate and connect in adult relationships. Learn how Emotionally Focused Individual Therapy in Kitsilano or online can help you build secure, connected relationships."
         }
       />
       <BlogPostPreview
-        href={"blog/understanding_emotions_in_relationships"}
+        href={"/blog/understanding_emotions_in_relationships"}
         image={coupleSunsetImage}
+        imageAlt="Couple watching the sunset together, representing emotional intensity in relationships"
         title={
           "Feeling ‘Too Emotional’ in Your Relationship? Understanding Why Your Emotions Can Feel So Intense"
         }
@@ -78,8 +81,9 @@ const MainContent = () => {
         }
       />
       <BlogPostPreview
-        href={"blog/attachment_theory"}
+        href={"/blog/attachment_theory"}
         image={attacmentImage}
+        imageAlt="Illustration representing attachment styles in relationships"
         title={
           "Why You Pull Away or Hold On Too Tight: How Attachment Styles Shape Your Relationships"
         }
@@ -96,6 +100,7 @@ export default function Home() {
     <div>
       <main className="flex-grow">
         <div className="container mx-auto p-6">
+          <h1 className="font-cooper text-5xl mb-8 text-center">Blog</h1>
           <MainContent />
         </div>
       </main>

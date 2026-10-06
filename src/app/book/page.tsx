@@ -2,13 +2,17 @@ import type { Metadata } from "next";
 
 import { MapPin, Monitor } from "lucide-react";
 
+import { pageMetadata } from "@/lib/seo";
+
 const HEADER_HEIGHT = 88;
 const FOOTER_HEIGHT = 80;
 
-export const metadata: Metadata = {
-  title: "Book",
-  description: "Book Cheyenne Ling Counselling.",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Book a Session",
+  description:
+    "Book a free 15-minute consultation or counselling session with Cheyenne Ling, RCC, online or in-person in Kitsilano, Vancouver.",
+  path: "/book",
+});
 
 const MainContent = () => {
   return (
@@ -19,9 +23,9 @@ const MainContent = () => {
       {/* Header Content */}
       <div className="text-center">
         <h1 className="text-6xl">Book a Session</h1>
-        <h4 className="mt-2 text-2xl">
+        <h2 className="mt-2 text-2xl">
           Choose your preferred booking option below.
-        </h4>
+        </h2>
       </div>
 
       {/* Buttons */}

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import { Menu, X } from "lucide-react"; // You can use another icon if you prefer
 
 const Header = () => {
@@ -24,11 +25,11 @@ const Header = () => {
           </a>
           */}
           <span className="text-xl font-semibold text-primary">
-            <a href="/">
+            <Link href="/">
               Cheyenne Ling
               <br />
               Counselling
-            </a>
+            </Link>
           </span>
         </div>
 
@@ -65,27 +66,30 @@ const NavLinks = ({ vertical = false }: { vertical?: boolean }) => {
     : "bg-foreground text-primary ";
   return (
     <>
-      <a href="/about" className={`${baseClass} ${layout}`}>
+      <Link href="/about" className={`${baseClass} ${layout}`}>
         About
-      </a>
-      <a href="/focus" className={`${baseClass} ${layout}`}>
+      </Link>
+      <Link href="/focus" className={`${baseClass} ${layout}`}>
         Areas of focus
-      </a>
-      <a href="/services" className={`${baseClass} ${layout}`}>
+      </Link>
+      <Link href="/services" className={`${baseClass} ${layout}`}>
         Services
-      </a>
-      <a href="/contact" className={`${baseClass} ${layout}`}>
+      </Link>
+      <Link href="/faqs" className={`${baseClass} ${layout}`}>
+        FAQs
+      </Link>
+      <Link href="/contact" className={`${baseClass} ${layout}`}>
         Contact
-      </a>
-      <a href="/blog" className={`${baseClass} ${layout}`}>
+      </Link>
+      <Link href="/blog" className={`${baseClass} ${layout}`}>
         Blog
-      </a>
-      <a
+      </Link>
+      <Link
         href="/book"
         className={`inline-block px-4 py-2 rounded-md text-primary transition-colors ${layout} ${bookingLayout}`}
       >
         Book now
-      </a>
+      </Link>
     </>
   );
 };

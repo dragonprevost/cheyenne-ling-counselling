@@ -6,8 +6,15 @@ interface ParagraphLinkProps {
 }
 
 const ParagraphLink = ({ href, children }: ParagraphLinkProps) => {
+  const isExternal = /^https?:\/\//.test(href);
   return (
-    <a href={href} className="underline" target="_blank" rel="noopener noreferrer">
+    <a
+      href={href}
+      className="underline"
+      {...(isExternal
+        ? { target: "_blank", rel: "noopener noreferrer" }
+        : {})}
+    >
       {children}
     </a>
   );

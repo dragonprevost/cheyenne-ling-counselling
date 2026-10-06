@@ -2,11 +2,14 @@ import Sheet from "@/components/Sheet";
 import type { Metadata } from "next";
 import Image from "next/image";
 import headShot from "/public/images/head-shot.jpg";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About",
-  description: "About Cheyenne Ling Counselling.",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "About Cheyenne Ling, RCC",
+  description:
+    "Meet Cheyenne Ling, a Registered Clinical Counsellor (RCC) in Kitsilano, Vancouver, offering trauma-informed, Emotionally Focused Individual Therapy (EFIT).",
+  path: "/about",
+});
 
 const HEADER_HEIGHT = 88; // px — adjust if your header height differs
 const FOOTER_HEIGHT = 0;
@@ -23,11 +26,11 @@ const About = () => {
       >
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 w-full">
           <div className="md:w-1/2 text-onBackground">
-            <h2 className="font-cooper text-7xl mb-4">About</h2>
+            <h1 className="font-cooper text-7xl mb-4">About</h1>
             <div className="flex justify-center">
               <Image
                 src={headShot.src}
-                alt="Avatar about image"
+                alt="Cheyenne Ling, Registered Clinical Counsellor in Kitsilano, Vancouver"
                 width={400}
                 height={400}
                 className="mx-auto rounded-xl"
@@ -95,7 +98,7 @@ const EducationItem = ({ title, body }: { title: string; body: string }) => {
 const TrainingsContent = () => {
   return (
     <section className="p-6">
-      <h2 className="text-2xl font-semibold mb-4">Trainings</h2>
+      <h3 className="text-2xl font-semibold mb-4">Trainings</h3>
       <List>
         <EducationItem
           title="Fundamentals of Psilocybin-Assisted Psychotherapy Training Program"
@@ -125,7 +128,7 @@ const TrainingsContent = () => {
 const EducationAndCertificationsContent = () => {
   return (
     <section className="p-6">
-      <h2 className="text-2xl font-semibold mb-4">Certifications</h2>
+      <h3 className="text-2xl font-semibold mb-4">Certifications</h3>
       <List>
         <EducationItem
           title="Registered Clinical Counsellor (RCC #24200)"
@@ -137,7 +140,7 @@ const EducationAndCertificationsContent = () => {
         />
       </List>
       <br />
-      <h2 className="text-2xl font-semibold mb-4">Education</h2>
+      <h3 className="text-2xl font-semibold mb-4">Education</h3>
       <List>
         <EducationItem
           title="Master of Arts in Counselling Psychology — With Distinction"

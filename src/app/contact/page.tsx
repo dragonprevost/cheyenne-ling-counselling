@@ -1,10 +1,14 @@
 import Sheet from "@/components/Sheet";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
   title: "Contact",
-  description: "Get in touch with Cheyenne Ling Counselling.",
-};
+  description:
+    "Get in touch with Cheyenne Ling, RCC, for counselling in Kitsilano, Vancouver or online across BC. Call, email, or book a free 15-minute consultation.",
+  path: "/contact",
+});
 
 const HEADER_HEIGHT = 88; // px — adjust if your header height differs
 const FOOTER_HEIGHT = 80;
@@ -23,7 +27,8 @@ const Contact = () => {
                 Get In Touch
               </h1>
               <p className="text-lg text-primary mb-4">
-                Feel free to contact me via email or phone!
+                Feel free to contact me via email or phone! I offer
+                counselling in Kitsilano, Vancouver and online across BC.
               </p>
             </div>
             <div className="mt-5">

@@ -2,12 +2,28 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import banner from "/public/images/blogs/couple-argument.jpg";
 import ParagraphLink from "../../../components/ParagraphLink";
+import { blogPostingJsonLd, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "How Childhood Shapes Communication in Adult Relationships",
-  description:
-    "Explore how your childhood experiences may shape the way you communicate and connect in adult relationships. Learn how Emotionally Focused Individual Therapy in Kitsilano or online can help you build secure, connected relationships.",
-};
+const TITLE = "How Childhood Shapes Communication in Adult Relationships";
+const DESCRIPTION =
+  "Explore how your childhood experiences may shape the way you communicate and connect in adult relationships. Learn how Emotionally Focused Individual Therapy in Kitsilano or online can help you build secure, connected relationships.";
+const PATH = "/blog/effect_of_childhood_on_communication";
+const IMAGE = "/images/blogs/couple-argument.jpg";
+
+export const metadata: Metadata = pageMetadata({
+  title: TITLE,
+  description: DESCRIPTION,
+  path: PATH,
+  image: IMAGE,
+});
+
+const jsonLd = blogPostingJsonLd({
+  title: TITLE,
+  description: DESCRIPTION,
+  path: PATH,
+  image: IMAGE,
+  datePublished: "2025-11-24",
+});
 
 const MainContent = () => {
   return (
@@ -19,7 +35,7 @@ const MainContent = () => {
 
       <Image
         src={banner}
-        alt="Understanding emotions in relationships"
+        alt="Couple arguing, representing childhood communication patterns in adult relationships"
         className="object-cover rounded-xl flex-shrink-0"
       />
 
@@ -29,15 +45,15 @@ const MainContent = () => {
         across BC can help you build more secure, connected relationships.
       </p>
 
-      <h1 className="text-4xl text-primary">
+      <h2 className="text-4xl text-primary">
         Does Childhood Influence Communication in Adult Relationships?
-      </h1>
+      </h2>
       <p>
         As children, we absorb our family’s ways of expressing emotions,
         resolving conflict, and seeking connection. Research suggests that
         growing up with caregivers who were distant, critical, or aggressive can
         lead children to develop an{" "}
-        <ParagraphLink href="https://cheyennelingcounselling.com/blog/attachment_theory">
+        <ParagraphLink href="/blog/attachment_theory">
           {" "}
           insecure attachment style
         </ParagraphLink>{" "}
@@ -69,9 +85,9 @@ const MainContent = () => {
         more likely to use these same positive patterns in adulthood.
       </p>
       <br />
-      <h1 className="text-4xl text-primary">
+      <h2 className="text-4xl text-primary">
         How Family Conflict Patterns Shape Adult Communication
-      </h1>
+      </h2>
       <p>
         <ParagraphLink href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11845222/">
           Researchers
@@ -101,9 +117,9 @@ const MainContent = () => {
         conflict in relationships more difficult.
       </p>
       <br />
-      <h1 className="text-4xl text-primary">
+      <h2 className="text-4xl text-primary">
         Common Adult Communication Patterns Rooted in Childhood
-      </h1>
+      </h2>
       <p>
         Early communication with caregivers shapes your{" "}
         <ParagraphLink href="/blog/attachment_theory">
@@ -178,10 +194,10 @@ const MainContent = () => {
         ways of expressing needs, managing conflict, and connecting with others.
       </p>
       <br />
-      <h1 className="text-4xl text-primary">
+      <h2 className="text-4xl text-primary">
         Healing Relationship Patterns Through Emotionally Focused and
         Attachment-Based Therapy
-      </h1>
+      </h2>
       <p>
         Understanding how your early experiences may have shaped the way you
         communicate is the first step toward change. The same patterns that once
@@ -221,9 +237,9 @@ const MainContent = () => {
       </p>
       <br />
 
-      <h1 className="text-4xl text-primary">
+      <h2 className="text-4xl text-primary">
         Therapy in Kitsilano, Vancouver, and Online Across BC
-      </h1>
+      </h2>
       <p>
         As a Registered Clinical Counsellor in Kitsilano, Vancouver, I support
         individuals in exploring how early family experiences shape
@@ -254,6 +270,10 @@ const MainContent = () => {
 export default function Home() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="container mx-auto p-6">
         <main className="flex-grow">
           <MainContent />

@@ -4,22 +4,27 @@ import dahlia from "/public/images/dahlia.jpg";
 import dahliaWhite from "/public/images/dahlia-white.jpg";
 import shroom from "/public/images/mushroom.jpg";
 import fiddleHead from "/public/images/fiddle-head.jpg";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Areas of focus",
-  description: "Cheyenne Ling Counselling, services and offerings.",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Areas of Focus",
+  description:
+    "Counselling support for relationship issues, trauma & PTSD, anxiety & stress, and grief & loss with Cheyenne Ling, RCC, in Kitsilano, Vancouver and online across BC.",
+  path: "/focus",
+});
 
 const Row = ({
   title,
   body,
   imgSrc,
+  imgAlt,
   caption,
   reverse,
 }: {
   title: string;
   body: string;
   imgSrc: string;
+  imgAlt: string;
   caption: string;
   reverse: boolean;
 }) => {
@@ -47,7 +52,7 @@ const Row = ({
         >
           <Image
             src={imgSrc}
-            alt="Avatar about image"
+            alt={imgAlt}
             width={400}
             height={400}
             className="mx-auto rounded-xl"
@@ -65,6 +70,7 @@ const AreasOfFocusList = () => {
         title="Relationship & Interpersonal Issues"
         body="I support individuals in navigating misunderstandings, improving communication, and setting healthy boundaries with partners, family members, friends, or colleagues. In our work together, we will explore how early relationship patterns and attachment styles may impact your current relationships and identify ways to foster stronger more fulfilling relationships."
         imgSrc={shroom.src}
+        imgAlt="Mushroom growing on a forest floor, symbolizing growth in relationship counselling"
         caption="Communication • Navigating Separation • Boundaries"
         reverse={false}
       />
@@ -73,7 +79,8 @@ const AreasOfFocusList = () => {
         title="Trauma & PTSD"
         body="Experiencing trauma, whether from a single event or ongoing distress, can have a profound and pervasive effect on the mind, body and emotions. If past events continue to trigger painful memories, anxiety, or emotional numbness, I’m here to support you. My approach is compassionate, trauma-informed, and tailored to your unique pace. I’ll support you rebuilding your sense of safety and moving towards healing."
         imgSrc={fiddleHead.src}
-        caption="Safety • Healing • Integrating"
+        imgAlt="Unfurling fiddlehead fern, symbolizing healing and trauma recovery"
+        caption="Safety • Healing • Integrating"
         reverse={true}
       />
       <hr />
@@ -81,7 +88,8 @@ const AreasOfFocusList = () => {
         title="Anxiety & Stress"
         body="The demands of life can be overwhelming, often leading to anxiety and stress. Whether you're managing work or school pressures, navigating relationships, or facing uncertainty, I offer a supportive space to safely explore these feelings. Together, we'll uncover the emotional triggers behind your anxiety and understand the messages your feelings are trying to communicate. By bringing awareness and understanding to these emotions, we can work towards lasting change and better emotional regulation."
         imgSrc={dahlia.src}
-        caption="Overthinking • Perfectionism • Fear"
+        imgAlt="Dahlia flower in bloom, symbolizing calm for anxiety and stress counselling"
+        caption="Overthinking • Perfectionism • Fear"
         reverse={false}
       />
       <hr />
@@ -89,6 +97,7 @@ const AreasOfFocusList = () => {
         title="Grief and Loss"
         body="Loss is a deeply personal experience that can affect every part of your life, leaving you feeling isolated and overwhelmed. Whether you are grieving the death of a loved one, the end of a relationship, or a significant life transition, I provide a supportive space where you can process your emotions with compassion and understanding. My approach helps you explore your feelings, find meaning in your experience, and begin to heal at your own pace while honoring your loss."
         imgSrc={dahliaWhite.src}
+        imgAlt="White dahlia flower, symbolizing gentleness in grief and loss counselling"
         caption="Processing Loss • Life Transitions • Meaning Making"
         reverse={true}
       />
@@ -100,6 +109,12 @@ export default function MainContent() {
   return (
     <main className="flex-grow">
       <div className="container mx-auto p-6">
+        <h1 className="font-cooper text-6xl text-center mb-6">
+          Areas of Focus
+        </h1>
+        <p className="text-xl text-center max-w-2xl mx-auto mb-4">
+          Counselling support in Kitsilano, Vancouver and online across BC for:
+        </p>
         <AreasOfFocusList />
       </div>
     </main>

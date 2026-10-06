@@ -2,13 +2,28 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import banner from "/public/images/blogs/couple-sunset.jpg";
 import ParagraphLink from "../../../components/ParagraphLink";
+import { blogPostingJsonLd, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title:
-    "Feeling ‘Too Emotional’ in Your Relationship? Understanding Why Your Feelings Can Feel So Intense",
-  description:
-    "Feeling overwhelmed in your relationship? Discover how past experiences may be impacting your current relationships and emotions and how online counselling can help.",
-};
+const TITLE = "Why Your Feelings Can Feel So Intense in Relationships";
+const DESCRIPTION =
+  "Feeling overwhelmed in your relationship? Discover how past experiences may be impacting your current relationships and emotions and how online counselling can help.";
+const PATH = "/blog/understanding_emotions_in_relationships";
+const IMAGE = "/images/blogs/couple-sunset.jpg";
+
+export const metadata: Metadata = pageMetadata({
+  title: TITLE,
+  description: DESCRIPTION,
+  path: PATH,
+  image: IMAGE,
+});
+
+const jsonLd = blogPostingJsonLd({
+  title: TITLE,
+  description: DESCRIPTION,
+  path: PATH,
+  image: IMAGE,
+  datePublished: "2025-10-19",
+});
 
 const MainContent = () => {
   return (
@@ -19,7 +34,7 @@ const MainContent = () => {
       </h1>
       <Image
         src={banner}
-        alt="Understanding emotions in relationships"
+        alt="Couple watching the sunset together, representing emotional intensity in relationships"
         className="object-cover rounded-xl"
       />
       <p className="text-gray-500 text-sm italic">
@@ -27,9 +42,9 @@ const MainContent = () => {
         may be impacting your current relationships and emotions and how online
         counselling can help.
       </p>
-      <h1 className="text-4xl text-primary">
+      <h2 className="text-4xl text-primary">
         Why Emotions Can Feel Overwhelming in Relationship
-      </h1>
+      </h2>
       <p>
         Within therapy, many people often share they feel “too emotional” in
         their relationships. However, there is often a very understandable
@@ -53,9 +68,9 @@ const MainContent = () => {
         current relationship.
       </p>
 
-      <h1 className="text-4xl text-primary">
+      <h2 className="text-4xl text-primary">
         What Emotional Overwhelm Looks Like in Relationships
-      </h1>
+      </h2>
       <p>
         When emotional closeness feels uncertain or threatened, you might notice
         yourself becoming emotionally overwhelmed. Common signs include:
@@ -79,9 +94,9 @@ const MainContent = () => {
         Understanding where they come from is the first step toward responding
         differently.
       </p>
-      <h1 className="text-4xl text-primary">
+      <h2 className="text-4xl text-primary">
         Could My Emotional Reactions Be Linked to Past Experiences or Trauma?
-      </h1>
+      </h2>
       <p>
         Many emotional reactions in adult relationships such as the examples
         listed above, trace back to early experiences with caregivers. Intense
@@ -109,9 +124,9 @@ const MainContent = () => {
         present, rather than being unconsciously driven by past experiences or
         trauma.
       </p>
-      <h1 className="text-4xl text-primary">
+      <h2 className="text-4xl text-primary">
         How Therapy Can Help You Navigate Emotional Intensity
-      </h1>
+      </h2>
       <p>
         Through counselling approaches like{" "}
         <b>Emotionally Focused Therapy (EFT)</b> and{" "}
@@ -136,10 +151,11 @@ const MainContent = () => {
       <p>
         Counselling provides a safe space to unpack emotional overwhelm, build
         trust in yourself and your relationships, and learn supportive ways to
-        communicate and connect with others. I offer <b>online counselling</b>,
-        supporting adults who want to work through past wounds, fear, and trust
-        issues so they can build secure and fulfilling connections in their
-        relationships.
+        communicate and connect with others. I offer{" "}
+        <b>in-person counselling in Kitsilano, Vancouver</b> and{" "}
+        <b>online counselling</b> across British Columbia, supporting adults
+        who want to work through past wounds, fear, and trust issues so they
+        can build secure and fulfilling connections in their relationships.
       </p>
 
       <p
@@ -158,6 +174,10 @@ const MainContent = () => {
 export default function Home() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-20 py-8">
         <main className="flex-grow">
           <MainContent />

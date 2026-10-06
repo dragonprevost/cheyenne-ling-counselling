@@ -3,13 +3,28 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import banner from "/public/images/blogs/attachment-image.jpg";
 import ParagraphLink from "../../../components/ParagraphLink";
+import { blogPostingJsonLd, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title:
-    "Feeling ‘Too Emotional’ in Your Relationship? Understanding Why Your Emotions Can Feel So Intense",
-  description:
-    "Do you pull away or feel ‘too emotional’ in relationships? Discover how therapy in Kitsilano, Vancouver or online can help you build secure, connected relationships.",
-};
+const TITLE = "How Attachment Styles Shape Your Relationships";
+const DESCRIPTION =
+  "Do you pull away or feel ‘too emotional’ in relationships? Discover how therapy in Kitsilano, Vancouver or online can help you build secure, connected relationships.";
+const PATH = "/blog/attachment_theory";
+const IMAGE = "/images/blogs/attachment-image.jpg";
+
+export const metadata: Metadata = pageMetadata({
+  title: TITLE,
+  description: DESCRIPTION,
+  path: PATH,
+  image: IMAGE,
+});
+
+const jsonLd = blogPostingJsonLd({
+  title: TITLE,
+  description: DESCRIPTION,
+  path: PATH,
+  image: IMAGE,
+  datePublished: "2025-10-25",
+});
 
 const MainContent = () => {
   return (
@@ -20,7 +35,7 @@ const MainContent = () => {
       </h1>
       <Image
         src={banner}
-        alt="Understanding emotions in relationships"
+        alt="Illustration representing attachment styles in relationships"
         className="object-cover rounded-xl flex-shrink-0"
       />
       <p className="text-gray-500 text-sm italic">
@@ -29,9 +44,9 @@ const MainContent = () => {
         connected relationships.
       </p>
 
-      <h1 className="text-4xl text-primary">
+      <h2 className="text-4xl text-primary">
         Why Relationships Can Bring Up So Much Emotion
-      </h1>
+      </h2>
       <p>
         Conflict in relationships can stir up powerful emotions such as fear,
         anger, and sadness because they activate our deepest attachment needs
@@ -70,9 +85,9 @@ const MainContent = () => {
         experiences that once helped you survive.
       </p>
 
-      <h1 className="text-4xl text-primary">
+      <h2 className="text-4xl text-primary">
         Understanding Attachment Styles: Why You Pull Away or Hold On Too Tight
-      </h1>
+      </h2>
       <p>
         Attachment theory describes that early experiences with caregivers shape
         our emotional patterns in relationships. Throughout evolutionary
@@ -182,9 +197,9 @@ const MainContent = () => {
           independence and emotional balance.
         </li>
       </ul>
-      <h1 className="text-4xl text-primary">
+      <h2 className="text-4xl text-primary">
         Healing Attachment Wounds to Build Fullfilling Relationships
-      </h1>
+      </h2>
       <p>
         If you struggle with anxiety, fear of abandonment, difficulty
         communicating, or feeling disconnected in relationships, understanding
@@ -213,9 +228,9 @@ const MainContent = () => {
         space to practice new ways of connecting with yourself and others that
         support greater <b>emotional resilience and relational security</b>.
       </p>
-      <h1 className="text-4xl text-primary">
+      <h2 className="text-4xl text-primary">
         Begin Feeling More Secure in Relationships
-      </h1>
+      </h2>
       <p>
         If you’re struggling with relationship challenges, emotional overwhelm,
         or fear of vulnerability, counselling can help you heal from past
@@ -244,6 +259,10 @@ const MainContent = () => {
 export default function Home() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="container mx-auto p-6">
         <main className="flex-grow">
           <MainContent />

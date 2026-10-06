@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Services",
-  description: "Counselling services offerings, and prices.",
-};
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Services & Pricing",
+  description:
+    "Counselling session pricing with Cheyenne Ling, RCC, including Emotionally Focused Individual Therapy (EFIT), in Kitsilano, Vancouver and online across BC. CVAP direct billing available.",
+  path: "/services",
+});
 
 interface InfoCardProps {
   title: string;
@@ -38,7 +43,7 @@ const Offerings = () => {
       <InfoCard
         title="Individual Counselling"
         price="$140"
-        body="Standard counselling sessions are 50 minutes long. I offer both online and in-person sessions for adults seeking a supportive, warm, and non-judgmental approach to navigating life’s challenges. In our sessions, you’ll have the space to unpack your thoughts and emotions at your own pace. Together, we’ll work towards understanding the patterns in your life, uncovering the roots of your challenges, and creating a path forward that aligns with your authentic self."
+        body="Standard counselling sessions are 50 minutes long. I offer both online and in-person sessions in Kitsilano, Vancouver for adults seeking a supportive, warm, and non-judgmental approach to navigating life’s challenges, including Emotionally Focused Individual Therapy (EFIT). In our sessions, you’ll have the space to unpack your thoughts and emotions at your own pace. Together, we’ll work towards understanding the patterns in your life, uncovering the roots of your challenges, and creating a path forward that aligns with your authentic self."
       />
       <InfoCard
         title="Extended Session"
@@ -58,7 +63,18 @@ export default function MainContent() {
   return (
     <main className="flex-grow">
       <div className="container mx-auto p-6">
+        <h1 className="font-cooper text-4xl mb-6">
+          Counselling Services & Pricing
+        </h1>
         <Offerings />
+        <div className="p-8 pt-0">
+          <Link
+            href="/book"
+            className="inline-block px-4 py-2 rounded-md bg-primary text-background transition-colors hover:bg-primary-light"
+          >
+            Book a free 15-minute consultation
+          </Link>
+        </div>
       </div>
     </main>
   );
