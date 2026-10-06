@@ -10,7 +10,7 @@ interface StyledLinkProps {
 export default function StyledLink({
   href,
   children,
-  className,
+  className = "",
 }: StyledLinkProps) {
   return (
     <Link href={href}>

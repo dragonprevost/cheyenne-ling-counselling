@@ -4,6 +4,8 @@ import dahlia from "/public/images/dahlia.jpg";
 import dahliaWhite from "/public/images/dahlia-white.jpg";
 import shroom from "/public/images/mushroom.jpg";
 import fiddleHead from "/public/images/fiddle-head.jpg";
+import { H1, H2 } from "@/components/layout/Heading";
+import PageContainer from "@/components/layout/PageContainer";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -38,7 +40,7 @@ const Row = ({
               ${reverse ? "order-1 md:order-2" : "order-1"}
             `}
         >
-          <h2 className="text-4xl mb-4">{title}</h2>
+          <H2 className="mb-4">{title}</H2>
           <p className="text-xl indent-0">{body}</p>
           <div className="text-center text-primary mt-4">
             <p className="font-bold">{caption}</p>
@@ -108,15 +110,13 @@ const AreasOfFocusList = () => {
 export default function MainContent() {
   return (
     <main className="flex-grow">
-      <div className="container mx-auto p-6">
-        <h1 className="font-cooper text-6xl text-center mb-6">
-          Areas of Focus
-        </h1>
+      <PageContainer>
+        <H1 className="text-center mb-6">Areas of Focus</H1>
         <p className="text-xl text-center max-w-2xl mx-auto mb-4">
           Counselling support in Kitsilano, Vancouver and online across BC for:
         </p>
         <AreasOfFocusList />
-      </div>
+      </PageContainer>
     </main>
   );
 }

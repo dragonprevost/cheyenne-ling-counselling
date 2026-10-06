@@ -21,6 +21,11 @@
   --attention: #4c706d;
   --surface: #f7f3e9;
   --surface-dark: #fff;
+
+  /* Single source of truth for the fixed header/footer heights, so
+     full-bleed hero sections don't each hardcode their own magic numbers. */
+  --header-height: 88px;
+  --footer-height: 140px;
 }
 
 @media (prefers-color-scheme: dark) {

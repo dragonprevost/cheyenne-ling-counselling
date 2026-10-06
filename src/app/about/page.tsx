@@ -2,6 +2,9 @@ import Sheet from "@/components/Sheet";
 import type { Metadata } from "next";
 import Image from "next/image";
 import headShot from "/public/images/head-shot.jpg";
+import FullBleedHero from "@/components/layout/FullBleedHero";
+import { H1, H2, H3 } from "@/components/layout/Heading";
+import Prose from "@/components/layout/Prose";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -11,22 +14,17 @@ export const metadata: Metadata = pageMetadata({
   path: "/about",
 });
 
-const HEADER_HEIGHT = 88; // px — adjust if your header height differs
-const FOOTER_HEIGHT = 0;
-
 const About = () => {
   return (
     <>
       {/* Top Section with bg image filling viewport minus header */}
-      <div
-        className="bg-[url(/images/mixed-flowers.jpg)] bg-cover bg-center p-6 flex items-center"
-        style={{
-          minHeight: `calc(100vh - ${HEADER_HEIGHT + FOOTER_HEIGHT}px)`,
-        }}
+      <FullBleedHero
+        backgroundImage="/images/mixed-flowers.jpg"
+        className="flex items-center"
       >
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 w-full">
           <div className="md:w-1/2 text-onBackground">
-            <h1 className="font-cooper text-7xl mb-4">About</h1>
+            <H1 className="mb-4">About</H1>
             <div className="flex justify-center">
               <Image
                 src={headShot.src}
@@ -43,14 +41,12 @@ const About = () => {
             </Sheet>
           </div>
         </div>
-      </div>
+      </FullBleedHero>
 
       {/* My approach Section */}
       <section className="p-6">
         <div className="bg-cover p-7">
-          <h2 className="font-cooper font-light text-6xl text-center">
-            My approach
-          </h2>
+          <H2 className="text-center">My approach</H2>
         </div>
         <ApproachContent />
       </section>
@@ -58,9 +54,7 @@ const About = () => {
       {/* Education & training Section */}
       <section className="p-6 bg-backgroundDark">
         <div className="bg-cover p-7">
-          <h2 className="font-cooper font-light text-6xl text-center">
-            Education & training
-          </h2>
+          <H2 className="text-center">Education & training</H2>
         </div>
         <div className="flex flex-col md:flex-row gap-6 md:gap-12">
           <div className="md:w-1/2">
@@ -98,7 +92,7 @@ const EducationItem = ({ title, body }: { title: string; body: string }) => {
 const TrainingsContent = () => {
   return (
     <section className="p-6">
-      <h3 className="text-2xl font-semibold mb-4">Trainings</h3>
+      <H3 className="mb-4">Trainings</H3>
       <List>
         <EducationItem
           title="Fundamentals of Psilocybin-Assisted Psychotherapy Training Program"
@@ -128,7 +122,7 @@ const TrainingsContent = () => {
 const EducationAndCertificationsContent = () => {
   return (
     <section className="p-6">
-      <h3 className="text-2xl font-semibold mb-4">Certifications</h3>
+      <H3 className="mb-4">Certifications</H3>
       <List>
         <EducationItem
           title="Registered Clinical Counsellor (RCC #24200)"
@@ -140,7 +134,7 @@ const EducationAndCertificationsContent = () => {
         />
       </List>
       <br />
-      <h3 className="text-2xl font-semibold mb-4">Education</h3>
+      <H3 className="mb-4">Education</H3>
       <List>
         <EducationItem
           title="Master of Arts in Counselling Psychology — With Distinction"
@@ -157,8 +151,8 @@ const EducationAndCertificationsContent = () => {
 
 const ApproachContent = () => {
   return (
-    <div className="text-lg">
-      <p className="indent-4 pt-3 text-base">
+    <Prose>
+      <p>
         My approach to therapy is trauma-informed and person-centred,
         recognizing the profound impact that past experiences can have on
         emotional, physical, and spiritual well-being. Central to my work is a
@@ -168,7 +162,7 @@ const ApproachContent = () => {
         authentic self, listened to with empathy and acceptance, and feel fully
         understood.
       </p>
-      <p className="text-base indent-4 pt-3">
+      <p>
         In addition to this foundation, I draw from cognitive-behavioural
         therapy (CBT) to help you identify and shift unhelpful thought and
         behaviour patterns. I also believe that emotions hold valuable messages
@@ -182,19 +176,18 @@ const ApproachContent = () => {
         modalities tailored to your unique needs. I also place a strong emphasis
         on the quality of our connection, recognizing the importance of the
         therapeutic relationship in supporting your healing process.
-        <br />
       </p>
-    </div>
+    </Prose>
   );
 };
 const AboutFirstParagraphContent = () => {
   return (
-    <div className="text-lg">
-      <p className="text-base indent-4 pt-3">
+    <Prose constrain={false}>
+      <p>
         Welcome to my page! I’m Cheyenne, a Registered Clinical Counsellor (RCC)
         based in Vancouver, BC.
       </p>
-      <p className="text-base indent-4 pt-3">
+      <p>
         Struggling to trust others or finding yourself stuck in the same painful
         relationship patterns can feel confusing and lonely. Many people I work
         with have learned to protect themselves by shutting down or holding in
@@ -203,7 +196,7 @@ const AboutFirstParagraphContent = () => {
         your current relationships, understand the patterns that have formed,
         and work toward creating more secure and fulfilling connections.
       </p>
-      <p className="text-base indent-4 pt-3">
+      <p>
         As a Registered Clinical Counsellor (RCC), I use Emotionally Focused
         Individual Therapy (EFIT) to help you understand how past relational
         wounds may be shaping your emotions, relationships, and sense of safety
@@ -212,24 +205,24 @@ const AboutFirstParagraphContent = () => {
         we’ll slow down, tune into your inner world, and support the parts of
         you that learned to protect, numb, or disconnect to cope.
       </p>
-      <p className="text-base indent-4 pt-3">
+      <p>
         My path to becoming a counsellor grew out of my own lived experiences
         with disordered eating, depression, and anxiety. My personal journey of
         healing has taught me the importance of a welcoming space where you can
         openly express your experiences without judgment.
       </p>
-      <p className="text-base indent-4 pt-3">
+      <p>
         Outside of therapy, I love spending time in the forest, gardening,
         weightlifting, running with music, and staying curious about the latest
         counselling research, especially in psychedelic-assisted psychotherapy.
         I am grateful to live and work on the unceded territories of the
         Musqueam, Squamish, and Tsleil-Waututh Nations.
       </p>
-      <p className="text-base indent-4 pt-3">
+      <p>
         In our work together, all emotions are welcome. If you feel we might be
         a good fit, I’d love to connect.
       </p>
-    </div>
+    </Prose>
   );
 };
 

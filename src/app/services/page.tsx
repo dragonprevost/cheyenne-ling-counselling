@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { H1 } from "@/components/layout/Heading";
+import PageContainer from "@/components/layout/PageContainer";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -62,12 +64,10 @@ const Offerings = () => {
 export default function MainContent() {
   return (
     <main className="flex-grow">
-      <div className="container mx-auto p-6">
-        <h1 className="font-cooper text-4xl mb-6">
-          Counselling Services & Pricing
-        </h1>
+      <PageContainer>
+        <H1 className="mb-6">Counselling Services & Pricing</H1>
         <Offerings />
-        <div className="p-8 pt-0">
+        <div className="px-8 pb-8 pt-8">
           <Link
             href="/book"
             className="inline-block px-4 py-2 rounded-md bg-primary text-background transition-colors hover:bg-primary-light"
@@ -75,7 +75,7 @@ export default function MainContent() {
             Book a free 15-minute consultation
           </Link>
         </div>
-      </div>
+      </PageContainer>
     </main>
   );
 }

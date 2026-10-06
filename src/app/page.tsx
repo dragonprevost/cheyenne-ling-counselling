@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { MapPin, Monitor } from "lucide-react";
 
 import StyledLink from "@/components/StyledLink";
+import FullBleedHero from "@/components/layout/FullBleedHero";
+import { H1, H2, H3 } from "@/components/layout/Heading";
+import PageContainer from "@/components/layout/PageContainer";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -14,26 +17,21 @@ export const metadata: Metadata = pageMetadata({
   path: "/",
 });
 
-const HEADER_HEIGHT = 88;
-const FOOTER_HEIGHT = 80;
-
 const Hero = () => {
   return (
-    <div
-      className="flex flex-col items-center justify-start bg-[url(/images/poppies.jpg)] bg-cover bg-center px-6 pt-[12vh]"
-      style={{ minHeight: `calc(100vh - ${HEADER_HEIGHT + FOOTER_HEIGHT}px)` }}
+    <FullBleedHero
+      backgroundImage="/images/poppies.jpg"
+      className="flex flex-col items-center justify-start pt-[12vh]"
     >
       {/* Header Content */}
       <div className="text-center">
         <p className="text-xl font-semibold">Welcome to</p>
-        <h1 className="font-cooper text-5xl font-bold md:text-6xl">
-          Cheyenne Ling Counselling
-        </h1>
-        <h2 className="mt-3 text-xl font-semibold md:text-2xl">
+        <H1>Cheyenne Ling Counselling</H1>
+        <H2 className="mt-3">
           Registered Clinical Counsellor in Kitsilano, Vancouver
           <br />
           and online across BC
-        </h2>
+        </H2>
       </div>
 
       {/* Buttons */}
@@ -60,13 +58,13 @@ const Hero = () => {
           </a>
         </div>
       </div>
-    </div>
+    </FullBleedHero>
   );
 };
 
 const Intro = () => {
   return (
-    <section className="container mx-auto max-w-3xl px-6 py-16 text-center">
+    <PageContainer maxWidth="max-w-3xl" className="text-center">
       <p className="text-lg indent-0">
         I&apos;m Cheyenne Ling, a Registered Clinical Counsellor (RCC) based in
         Kitsilano, Vancouver, offering in-person and online counselling across
@@ -76,7 +74,7 @@ const Intro = () => {
         heal old relational wounds, and build more secure, authentic
         connections with yourself and others.
       </p>
-    </section>
+    </PageContainer>
   );
 };
 
@@ -103,13 +101,11 @@ const FocusAreas = () => {
   return (
     <section className="bg-backgroundDark px-6 py-16">
       <div className="container mx-auto max-w-4xl text-center">
-        <h2 className="font-cooper text-4xl font-light">
-          Areas I Support
-        </h2>
+        <H2>Areas I Support</H2>
         <div className="mt-8 grid gap-6 text-left sm:grid-cols-2">
           {areas.map((area) => (
             <div key={area.title} className="rounded-xl bg-surface p-6">
-              <h3 className="text-xl font-semibold">{area.title}</h3>
+              <H3>{area.title}</H3>
               <p className="mt-2 text-base">{area.body}</p>
             </div>
           ))}
@@ -124,8 +120,8 @@ const FocusAreas = () => {
 
 const AboutTeaser = () => {
   return (
-    <section className="container mx-auto max-w-3xl px-6 py-16 text-center">
-      <h2 className="font-cooper text-4xl font-light">My Approach</h2>
+    <PageContainer maxWidth="max-w-3xl" className="text-center">
+      <H2>My Approach</H2>
       <p className="mt-4 text-lg">
         My approach is trauma-informed and person-centred, drawing on
         Emotionally Focused Individual Therapy (EFIT), Internal Family Systems
@@ -137,7 +133,7 @@ const AboutTeaser = () => {
         <StyledLink href="/services">View services & pricing</StyledLink>
         <StyledLink href="/book">Book a free consultation</StyledLink>
       </div>
-    </section>
+    </PageContainer>
   );
 };
 

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import banner from "/public/images/blogs/couple-sunset.jpg";
 import ParagraphLink from "../../../components/ParagraphLink";
+import { H1, H2, H3 } from "@/components/layout/Heading";
+import Prose from "@/components/layout/Prose";
 import { blogPostingJsonLd, pageMetadata } from "@/lib/seo";
 
 const TITLE = "Why Your Feelings Can Feel So Intense in Relationships";
@@ -27,11 +29,11 @@ const jsonLd = blogPostingJsonLd({
 
 const MainContent = () => {
   return (
-    <div className="space-y-4">
-      <h1 className="text-5xl text-primary font-bold">
+    <Prose>
+      <H1>
         Feeling ‘Too Emotional’ in Your Relationship? Understanding Why Your
         Feelings Can Feel So Intense
-      </h1>
+      </H1>
       <Image
         src={banner}
         alt="Couple watching the sunset together, representing emotional intensity in relationships"
@@ -42,9 +44,9 @@ const MainContent = () => {
         may be impacting your current relationships and emotions and how online
         counselling can help.
       </p>
-      <h2 className="text-4xl text-primary">
+      <H2>
         Why Emotions Can Feel Overwhelming in Relationship
-      </h2>
+      </H2>
       <p>
         Within therapy, many people often share they feel “too emotional” in
         their relationships. However, there is often a very understandable
@@ -68,9 +70,9 @@ const MainContent = () => {
         current relationship.
       </p>
 
-      <h2 className="text-4xl text-primary">
+      <H2>
         What Emotional Overwhelm Looks Like in Relationships
-      </h2>
+      </H2>
       <p>
         When emotional closeness feels uncertain or threatened, you might notice
         yourself becoming emotionally overwhelmed. Common signs include:
@@ -94,9 +96,9 @@ const MainContent = () => {
         Understanding where they come from is the first step toward responding
         differently.
       </p>
-      <h2 className="text-4xl text-primary">
+      <H2>
         Could My Emotional Reactions Be Linked to Past Experiences or Trauma?
-      </h2>
+      </H2>
       <p>
         Many emotional reactions in adult relationships such as the examples
         listed above, trace back to early experiences with caregivers. Intense
@@ -124,9 +126,9 @@ const MainContent = () => {
         present, rather than being unconsciously driven by past experiences or
         trauma.
       </p>
-      <h2 className="text-4xl text-primary">
+      <H2>
         How Therapy Can Help You Navigate Emotional Intensity
-      </h2>
+      </H2>
       <p>
         Through counselling approaches like{" "}
         <b>Emotionally Focused Therapy (EFT)</b> and{" "}
@@ -167,7 +169,7 @@ const MainContent = () => {
         to start learning how to manage emotional overwhelm and create
         relationships that feel secure, authentic, and connected.
       </p>
-    </div>
+    </Prose>
   );
 };
 

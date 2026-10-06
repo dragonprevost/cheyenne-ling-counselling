@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import { H1 } from "@/components/layout/Heading";
+import PageContainer from "@/components/layout/PageContainer";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -73,16 +75,14 @@ const faqJsonLd = {
 const FAQs = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold text-primary mb-4 font-cooper">
-        Frequently Asked Questions
-      </h1>
+      <H1 className="mb-6">Frequently Asked Questions</H1>
       <div className="bg-foreground rounded-xl p-2">
         {FAQS.map((faq) => (
           <div className="m-4" key={faq.question}>
-            <h2 className="text-xl font-bold text-black mb-2">
+            <h2 className="text-xl font-bold text-primary mb-2">
               {faq.question}
             </h2>
-            <p className="text-background">{faq.answer}</p>
+            <p className="text-primary">{faq.answer}</p>
           </div>
         ))}
       </div>
@@ -97,9 +97,9 @@ export default function MainContent() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <div className="container mx-auto p-6">
+      <PageContainer>
         <FAQs />
-      </div>
+      </PageContainer>
     </main>
   );
 }

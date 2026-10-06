@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import banner from "/public/images/blogs/attachment-image.jpg";
 import ParagraphLink from "../../../components/ParagraphLink";
+import { H1, H2, H3 } from "@/components/layout/Heading";
+import Prose from "@/components/layout/Prose";
 import { blogPostingJsonLd, pageMetadata } from "@/lib/seo";
 
 const TITLE = "How Attachment Styles Shape Your Relationships";
@@ -28,11 +30,11 @@ const jsonLd = blogPostingJsonLd({
 
 const MainContent = () => {
   return (
-    <div className="space-y-4">
-      <h1 className="text-5xl text-primary font-bold">
+    <Prose>
+      <H1>
         Why You Pull Away or Hold On Too Tight: How Attachment Styles Shape Your
         Relationships
-      </h1>
+      </H1>
       <Image
         src={banner}
         alt="Illustration representing attachment styles in relationships"
@@ -44,9 +46,9 @@ const MainContent = () => {
         connected relationships.
       </p>
 
-      <h2 className="text-4xl text-primary">
+      <H2>
         Why Relationships Can Bring Up So Much Emotion
-      </h2>
+      </H2>
       <p>
         Conflict in relationships can stir up powerful emotions such as fear,
         anger, and sadness because they activate our deepest attachment needs
@@ -85,9 +87,9 @@ const MainContent = () => {
         experiences that once helped you survive.
       </p>
 
-      <h2 className="text-4xl text-primary">
+      <H2>
         Understanding Attachment Styles: Why You Pull Away or Hold On Too Tight
-      </h2>
+      </H2>
       <p>
         Attachment theory describes that early experiences with caregivers shape
         our emotional patterns in relationships. Throughout evolutionary
@@ -153,7 +155,7 @@ const MainContent = () => {
         relationships. These patterns form the foundation of our adult
         attachment styles:
       </p>
-      <h3 className="text-xl">Anxious</h3>
+      <H3>Anxious</H3>
       <ul className="list-disc list-inside ml-4">
         <li>
           &quot;If I’m upset, then I worry my partner won’t be there for
@@ -164,7 +166,7 @@ const MainContent = () => {
           partner doesn’t care enough.
         </li>
       </ul>
-      <h3 className="text-xl">Avoidant</h3>
+      <H3>Avoidant</H3>
       <ul className="list-disc list-inside ml-4">
         <li>
           &quot;If I’m upset, then it feels safer to deal with it on my
@@ -175,7 +177,7 @@ const MainContent = () => {
           closeness, often pulling away when things feel too intense.
         </li>
       </ul>
-      <h3 className="text-xl">Disorganized</h3>
+      <H3>Disorganized</H3>
       <ul className="list-disc list-inside ml-4">
         <li>
           &quot;If I’m upset, then I want closeness but also feel scared of
@@ -186,7 +188,7 @@ const MainContent = () => {
           signals or difficulty trusting others.
         </li>
       </ul>
-      <h3 className="text-xl">Secure</h3>
+      <H3>Secure</H3>
       <ul className="list-disc list-inside ml-4">
         <li>
           &quot;If I’m upset, then I trust I can turn to my partner for
@@ -197,9 +199,9 @@ const MainContent = () => {
           independence and emotional balance.
         </li>
       </ul>
-      <h2 className="text-4xl text-primary">
+      <H2>
         Healing Attachment Wounds to Build Fullfilling Relationships
-      </h2>
+      </H2>
       <p>
         If you struggle with anxiety, fear of abandonment, difficulty
         communicating, or feeling disconnected in relationships, understanding
@@ -228,9 +230,9 @@ const MainContent = () => {
         space to practice new ways of connecting with yourself and others that
         support greater <b>emotional resilience and relational security</b>.
       </p>
-      <h2 className="text-4xl text-primary">
+      <H2>
         Begin Feeling More Secure in Relationships
-      </h2>
+      </H2>
       <p>
         If you’re struggling with relationship challenges, emotional overwhelm,
         or fear of vulnerability, counselling can help you heal from past
@@ -252,7 +254,7 @@ const MainContent = () => {
         to start learning how to create relationships that feel secure,
         authentic, and connected.
       </p>
-    </div>
+    </Prose>
   );
 };
 

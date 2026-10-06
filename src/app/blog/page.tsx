@@ -5,6 +5,9 @@ import { StaticImageData } from "next/image";
 import coupleSunsetImage from "/public/images/blogs/couple-sunset.jpg";
 import coupleArgumentImage from "/public/images/blogs/couple-argument.jpg";
 import attacmentImage from "/public/images/blogs/attachment-image.jpg";
+import emdrImage from "/public/images/forest-1.jpg";
+import { H1 } from "@/components/layout/Heading";
+import PageContainer from "@/components/layout/PageContainer";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -61,6 +64,15 @@ const MainContent = () => {
   return (
     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       <BlogPostPreview
+        href={"/blog/emdr_therapy"}
+        image={emdrImage}
+        imageAlt="Mossy forest in British Columbia, representing grounding and safety in EMDR therapy"
+        title={"EMDR Therapy in Kitsilano, Vancouver: How It Works and What to Expect"}
+        description={
+          "What is EMDR therapy and how does it work? Learn about the 8 phases of EMDR and how it can help with trauma, anxiety, and phobias in Kitsilano, Vancouver or online across BC."
+        }
+      />
+      <BlogPostPreview
         href={"/blog/effect_of_childhood_on_communication"}
         image={coupleArgumentImage}
         imageAlt="Couple arguing, representing childhood communication patterns in adult relationships"
@@ -99,10 +111,10 @@ export default function Home() {
   return (
     <div>
       <main className="flex-grow">
-        <div className="container mx-auto p-6">
-          <h1 className="font-cooper text-5xl mb-8 text-center">Blog</h1>
+        <PageContainer>
+          <H1 className="mb-8 text-center">Blog</H1>
           <MainContent />
-        </div>
+        </PageContainer>
       </main>
     </div>
   );

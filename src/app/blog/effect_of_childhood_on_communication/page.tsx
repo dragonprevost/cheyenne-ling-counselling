@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import banner from "/public/images/blogs/couple-argument.jpg";
 import ParagraphLink from "../../../components/ParagraphLink";
+import { H1, H2, H3 } from "@/components/layout/Heading";
+import Prose from "@/components/layout/Prose";
 import { blogPostingJsonLd, pageMetadata } from "@/lib/seo";
 
 const TITLE = "How Childhood Shapes Communication in Adult Relationships";
@@ -27,11 +29,11 @@ const jsonLd = blogPostingJsonLd({
 
 const MainContent = () => {
   return (
-    <div className="space-y-4">
-      <h1 className="text-5xl text-primary font-bold">
+    <Prose>
+      <H1>
         How Childhood Shapes Communication in Adult Relationships: Understanding
         Attachment and Relationship Patterns
-      </h1>
+      </H1>
 
       <Image
         src={banner}
@@ -45,9 +47,9 @@ const MainContent = () => {
         across BC can help you build more secure, connected relationships.
       </p>
 
-      <h2 className="text-4xl text-primary">
+      <H2>
         Does Childhood Influence Communication in Adult Relationships?
-      </h2>
+      </H2>
       <p>
         As children, we absorb our family’s ways of expressing emotions,
         resolving conflict, and seeking connection. Research suggests that
@@ -85,9 +87,9 @@ const MainContent = () => {
         more likely to use these same positive patterns in adulthood.
       </p>
       <br />
-      <h2 className="text-4xl text-primary">
+      <H2>
         How Family Conflict Patterns Shape Adult Communication
-      </h2>
+      </H2>
       <p>
         <ParagraphLink href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11845222/">
           Researchers
@@ -117,9 +119,9 @@ const MainContent = () => {
         conflict in relationships more difficult.
       </p>
       <br />
-      <h2 className="text-4xl text-primary">
+      <H2>
         Common Adult Communication Patterns Rooted in Childhood
-      </h2>
+      </H2>
       <p>
         Early communication with caregivers shapes your{" "}
         <ParagraphLink href="/blog/attachment_theory">
@@ -194,10 +196,10 @@ const MainContent = () => {
         ways of expressing needs, managing conflict, and connecting with others.
       </p>
       <br />
-      <h2 className="text-4xl text-primary">
+      <H2>
         Healing Relationship Patterns Through Emotionally Focused and
         Attachment-Based Therapy
-      </h2>
+      </H2>
       <p>
         Understanding how your early experiences may have shaped the way you
         communicate is the first step toward change. The same patterns that once
@@ -237,9 +239,9 @@ const MainContent = () => {
       </p>
       <br />
 
-      <h2 className="text-4xl text-primary">
+      <H2>
         Therapy in Kitsilano, Vancouver, and Online Across BC
-      </h2>
+      </H2>
       <p>
         As a Registered Clinical Counsellor in Kitsilano, Vancouver, I support
         individuals in exploring how early family experiences shape
@@ -263,7 +265,7 @@ const MainContent = () => {
         to begin creating relationships that feel secure, authentic, and
         connected.
       </p>
-    </div>
+    </Prose>
   );
 };
 

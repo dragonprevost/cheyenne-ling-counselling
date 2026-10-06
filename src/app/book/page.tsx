@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 
 import { MapPin, Monitor } from "lucide-react";
 
+import FullBleedHero from "@/components/layout/FullBleedHero";
+import { H1, H2 } from "@/components/layout/Heading";
 import { pageMetadata } from "@/lib/seo";
-
-const HEADER_HEIGHT = 88;
-const FOOTER_HEIGHT = 80;
 
 export const metadata: Metadata = pageMetadata({
   title: "Book a Session",
@@ -16,16 +15,15 @@ export const metadata: Metadata = pageMetadata({
 
 const MainContent = () => {
   return (
-    <div
-      className="flex flex-col items-center justify-start bg-[url(/images/pale-sky.jpg)] bg-cover bg-center px-6 pt-[12vh]"
-      style={{ minHeight: `calc(100vh - ${HEADER_HEIGHT + FOOTER_HEIGHT}px)` }}
+    <FullBleedHero
+      backgroundImage="/images/pale-sky.jpg"
+      className="flex flex-col items-center justify-start pt-[12vh]"
+      accountForFooter
     >
       {/* Header Content */}
       <div className="text-center">
-        <h1 className="text-6xl">Book a Session</h1>
-        <h2 className="mt-2 text-2xl">
-          Choose your preferred booking option below.
-        </h2>
+        <H1>Book a Session</H1>
+        <H2 className="mt-2">Choose your preferred booking option below.</H2>
       </div>
 
       {/* Buttons */}
@@ -52,7 +50,7 @@ const MainContent = () => {
           </a>
         </div>
       </div>
-    </div>
+    </FullBleedHero>
   );
 };
 

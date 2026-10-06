@@ -27,8 +27,10 @@ export default function StructuredData() {
         priceRange: "$140-$224",
         address: {
           "@type": "PostalAddress",
+          streetAddress: "1764 W 7th Ave",
           addressLocality: "Vancouver",
           addressRegion: BUSINESS_REGION,
+          postalCode: "V6J 5A3",
           addressCountry: "CA",
         },
         areaServed: [
